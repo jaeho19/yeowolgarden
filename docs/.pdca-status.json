@@ -1,0 +1,244 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-05-16T10:42:53.872Z",
+  "activeFeatures": [
+    "yeowol-farm-website",
+    "db",
+    "yeowol garden",
+    "schemas",
+    "scripts"
+  ],
+  "primaryFeature": "yeowol-farm-website",
+  "features": {
+    "yeowol-farm-website": {
+      "phase": "do",
+      "level": "Dynamic",
+      "projectName": "yeowolgarden",
+      "githubRepo": "https://github.com/jaeho19/yeowolgarden",
+      "startedAt": "2026-05-16T06:00:00.000Z",
+      "lastUpdated": "2026-05-16T08:30:00.000Z",
+      "planVersion": "0.4",
+      "designVersion": "0.4",
+      "doVersion": "0.3",
+      "infrastructure": {
+        "hosting": "Netlify",
+        "siteUrl": "https://yeowolfarm.netlify.app",
+        "database": "Turso (SQLite + libSQL)",
+        "orm": "Drizzle ORM",
+        "auth": "NextAuth Credentials + bcrypt",
+        "email": "NONE",
+        "userStatusFlow": "/apply/status (신청번호+이메일로 본인 조회) + /notice (사이트 공지)",
+        "map": "Naver 지도 iframe 임베드 (API 가입 불필요)",
+        "gpsCoords": "37.514173, 126.793019",
+        "adminId": "adminyeowol",
+        "adminPasswordHash": "TBD (bcrypt of 'jaeho6108!' generated in M1)"
+      },
+      "decisionsResolved": "D-01 to D-22 (Q-19, Q-20, Q-21 모두 확정)",
+      "newFeaturesInV04": [
+        "본인 조회 페이지 /apply/status",
+        "사이트 공지 시스템 /notice + 어드민 CRUD",
+        "applicationNumber 자동 발급 (#1234 형식)",
+        "이메일 발송 전면 제거"
+      ],
+      "currentMilestone": "M1",
+      "milestoneStatus": {
+        "M1": "ready",
+        "M2": "pending",
+        "M3": "pending",
+        "M4": "pending",
+        "M5": "pending",
+        "M6": "pending",
+        "M7": "pending"
+      },
+      "deadline": "2026-12-31",
+      "seasonStart": "2027-01-01",
+      "decisions": {
+        "D-01": "online-semi-auto",
+        "D-01-1": "semi-auto-with-admin-approval",
+        "D-01-2": "preferred-zones",
+        "D-01-3": "biz-registered-no-pg",
+        "D-02": "korean-only",
+        "D-03": "no-blog",
+        "D-04": "yeowolfarm.kr",
+        "D-05": "kakao-map",
+        "D-06": "7-month-deadline-driven",
+        "D-07": "ai-retouch-existing-9-photos"
+      },
+      "documents": {
+        "plan": "docs/01-plan/features/yeowol-farm-website.plan.md",
+        "design": "docs/02-design/features/yeowol-farm-website.design.md",
+        "do": "docs/03-do/features/yeowol-farm-website.do.md",
+        "analysis": null,
+        "report": null
+      },
+      "assets": {
+        "photos": "C:/dev/yeowol garden/사진/",
+        "photoCount": 9
+      },
+      "matchRate": null,
+      "iterationCount": 0
+    },
+    "db": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-16T10:33:23.030Z",
+        "lastUpdated": "2026-05-16T10:33:23.030Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\db\\schema.ts"
+    },
+    "yeowol garden": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-16T10:33:33.520Z",
+        "lastUpdated": "2026-05-16T10:40:54.781Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\drizzle.config.ts"
+    },
+    "schemas": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-16T10:33:54.111Z",
+        "lastUpdated": "2026-05-16T10:34:13.934Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\lib\\schemas\\index.ts"
+    },
+    "scripts": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-16T10:39:29.173Z",
+        "lastUpdated": "2026-05-16T10:42:53.872Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\scripts\\check-db.ts"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": [
+      {
+        "phase": "plan",
+        "feature": "yeowol-farm-website",
+        "level": "Starter",
+        "timestamp": "2026-05-16T06:00:00.000Z"
+      },
+      {
+        "phase": "plan",
+        "feature": "yeowol-farm-website",
+        "level": "Dynamic",
+        "timestamp": "2026-05-16T06:15:00.000Z",
+        "note": "Level upgraded from Starter due to backend/DB/admin requirements"
+      },
+      {
+        "phase": "design",
+        "feature": "yeowol-farm-website",
+        "level": "Dynamic",
+        "timestamp": "2026-05-16T06:30:00.000Z",
+        "note": "Design v0.1 — 7 public + 5 admin pages, allocation algorithm, API spec, security plan"
+      }
+    ]
+  },
+  "session": {
+    "startedAt": "2026-05-16T05:54:00.974Z",
+    "onboardingCompleted": true,
+    "lastActivity": "2026-05-16T10:42:53.872Z"
+  },
+  "history": [
+    {
+      "action": "plan",
+      "feature": "yeowol-farm-website",
+      "timestamp": "2026-05-16T06:00:00.000Z"
+    },
+    {
+      "action": "plan-update",
+      "feature": "yeowol-farm-website",
+      "timestamp": "2026-05-16T06:15:00.000Z",
+      "note": "D-01~D-07 decisions reflected. Level: Starter → Dynamic"
+    },
+    {
+      "action": "design",
+      "feature": "yeowol-farm-website",
+      "timestamp": "2026-05-16T06:30:00.000Z",
+      "note": "Design v0.1 created at docs/02-design/features/yeowol-farm-website.design.md"
+    },
+    {
+      "timestamp": "2026-05-16T10:33:23.030Z",
+      "feature": "db",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:33:33.520Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:33:43.043Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:33:54.111Z",
+      "feature": "schemas",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:34:04.244Z",
+      "feature": "schemas",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:34:13.934Z",
+      "feature": "schemas",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:39:29.173Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:40:54.781Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:41:05.386Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-16T10:42:53.872Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}
