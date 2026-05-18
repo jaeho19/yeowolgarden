@@ -20,13 +20,24 @@
     "Noto Serif KR", "Nanum Myeongjo", serif;
   --font-mono: var(--font-geist-mono);
 
-  /* ─── Type scale (fluid clamp, 1.25+ ratio) ─── */
-  --text-display: clamp(2.5rem, 5.5vw, 4.25rem); /* Hero 전용 */
-  --text-h1: clamp(2rem, 3.5vw, 3rem);
-  --text-h2: clamp(1.5rem, 2.4vw, 2.125rem);
-  --text-h3: 1.25rem;
-  --text-body: 1rem;
-  --text-meta: 0.875rem;
+  /* ─── Type scale (fluid clamp, 1.25+ ratio) — 두 번째 부스트 (2026-05-18) ─── */
+  --text-display: clamp(3.25rem, 7vw, 5.75rem); /* Hero 전용 52→92 (was 48→84) */
+  --text-h1: clamp(2.5rem, 4.5vw, 3.75rem);     /* 40→60 (was 38→56) */
+  --text-h2: clamp(1.875rem, 3vw, 2.5rem);      /* 30→40 (was 28→38) */
+  --text-h3: 1.5rem;                             /* 24 (was 22) */
+  --text-body: 1.125rem;                         /* 18 (was 17) */
+  --text-meta: 1rem;                             /* 16 (was 15) */
+
+  /* ─── Tailwind 기본 사이즈 토큰 — 두 번째 부스트 ───
+     사이트 전반의 text-sm(71회)·text-base(20회)·text-lg(19회) 등이
+     일괄 따라오도록 토큰만 재정의한다. */
+  --text-xs: 0.875rem;    /* 13→14 */
+  --text-sm: 1rem;        /* 15→16 */
+  --text-base: 1.125rem;  /* 17→18 */
+  --text-lg: 1.25rem;     /* 19→20 */
+  --text-xl: 1.5rem;      /* 22→24 */
+  --text-2xl: 1.75rem;    /* 26→28 */
+  --text-3xl: 2.25rem;    /* 32→36 */
 
   /* ─── Brand (leaf) — 채도 톤다운 (0.05~0.085) ───
      기존 brand-* 클래스명을 유지하여 26개 파일 호환.
@@ -170,5 +181,17 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  /* ─── .editorial-photo ───
+     사이트 모든 사진(실사 9장 + AI 일러스트)을 같은 톤으로 묶는다.
+     - brightness(0.97) — 황혼 빛의 누런 톤 살짝 다운
+     - saturate(0.85) — 비닐 천 파랑·노란 표지판이 시선 덜 잡게 (SaaS 그린 차단)
+     - contrast(1.04) — 흙·잎 디테일 미세 부스트
+     AI 사진의 과하게 깨끗한 채도를 실사 9장의 거친 톤과 통일하는 게 핵심. */
+  .editorial-photo {
+    filter: brightness(0.97) saturate(0.85) contrast(1.04);
   }
 }
