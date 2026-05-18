@@ -19,12 +19,12 @@ interface Props {
  */
 export function ApplicationStatusCard({ result }: Props) {
   return (
-    <div className="rounded-2xl border-2 border-brand-200 bg-card p-6 shadow-sm sm:p-8">
+    <div className="rounded-md border-2 border-brand-200 bg-card p-6 sm:p-8">
       <header className="border-b border-border pb-4">
-        <p className="text-xs uppercase tracking-wider text-muted-foreground">
-          신청 정보
-        </p>
-        <h2 className="mt-1 text-2xl font-bold">신청 #{result.applicationNumber}</h2>
+        <p className="text-xs font-medium text-muted-foreground">신청 정보</p>
+        <h2 className="mt-1 font-heading text-2xl font-bold tracking-tight text-foreground">
+          신청 #{result.applicationNumber}
+        </h2>
       </header>
 
       {/* 기본 정보 */}
@@ -51,10 +51,10 @@ export function ApplicationStatusCard({ result }: Props) {
       {/* CTA */}
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <LinkButton href="/notice" variant="outline" className="flex-1">
-          📢 공지사항 보기
+          공지사항 보기
         </LinkButton>
         <LinkButton href="/access" variant="outline" className="flex-1">
-          🗺️ 오시는 길
+          오시는 길
         </LinkButton>
       </div>
     </div>
@@ -65,7 +65,7 @@ function Row({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex gap-3">
       <dt className="w-24 shrink-0 text-muted-foreground">{label}</dt>
-      <dd className="font-medium">{value}</dd>
+      <dd className="font-medium tabular-nums">{value}</dd>
     </div>
   )
 }
@@ -75,18 +75,16 @@ function StatusSection({ result }: { result: LookupResult }) {
     case 'PENDING':
       return (
         <div>
-          <StatusBadge color="amber" icon="⏳">
-            입금 대기
-          </StatusBadge>
+          <StatusBadge color="amber">입금 대기</StatusBadge>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
             입금 후 1~3일 내에 운영자가 확인합니다. 확인 즉시 인접한 구획이
             자동 배정됩니다.
           </p>
-          <div className="mt-4 rounded-lg bg-brand-50/60 p-4 text-sm">
+          <div className="mt-4 rounded-md border border-border bg-secondary p-4 text-sm">
             <p className="text-xs text-muted-foreground">계좌</p>
-            <p className="mt-1 break-all font-mono text-sm">{BANK_INFO}</p>
+            <p className="mt-1 break-all text-sm tabular-nums">{BANK_INFO}</p>
             <p className="mt-3 text-xs text-muted-foreground">금액</p>
-            <p className="mt-1 text-base font-semibold">
+            <p className="mt-1 text-base font-semibold tabular-nums">
               {formatKrw(result.totalPriceKrw)}
             </p>
           </div>
@@ -96,9 +94,7 @@ function StatusSection({ result }: { result: LookupResult }) {
     case 'PAID':
       return (
         <div>
-          <StatusBadge color="blue" icon="🔄">
-            운영자 배정 대기
-          </StatusBadge>
+          <StatusBadge color="blue">운영자 배정 대기</StatusBadge>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
             입금이 확인되었으나, 인접한 구획 묶음을 찾는 중입니다. 곧 운영자가
             직접 연락드리거나 배정이 완료됩니다.
@@ -109,9 +105,7 @@ function StatusSection({ result }: { result: LookupResult }) {
     case 'CONFIRMED':
       return (
         <div>
-          <StatusBadge color="green" icon="✅">
-            배정 완료
-          </StatusBadge>
+          <StatusBadge color="green">배정 완료</StatusBadge>
           {result.approvedAt && (
             <p className="mt-2 text-xs text-muted-foreground">
               배정일:{' '}
@@ -120,11 +114,11 @@ function StatusSection({ result }: { result: LookupResult }) {
               })}
             </p>
           )}
-          <div className="mt-4 rounded-lg border border-brand-300 bg-brand-50/40 p-4">
-            <p className="text-xs uppercase tracking-wider text-muted-foreground">
+          <div className="mt-4 rounded-md border border-brand-300 bg-secondary p-4">
+            <p className="text-xs font-medium text-muted-foreground">
               배정 구획
             </p>
-            <p className="mt-2 text-xl font-bold text-brand-700">
+            <p className="mt-2 font-heading text-xl font-bold tabular-nums text-brand-700">
               {result.assignedPlots
                 .map((p) => `#${p.plotNumber}`)
                 .join(', ')}
@@ -134,7 +128,7 @@ function StatusSection({ result }: { result: LookupResult }) {
             </p>
           </div>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-            ⓘ 정확한 개장일과 입장 안내는{' '}
+            정확한 개장일과 입장 안내는{' '}
             <Link href="/notice" className="text-brand-700 underline">
               공지사항
             </Link>
@@ -146,9 +140,7 @@ function StatusSection({ result }: { result: LookupResult }) {
     case 'REJECTED':
       return (
         <div>
-          <StatusBadge color="red" icon="❌">
-            거절됨
-          </StatusBadge>
+          <StatusBadge color="red">거절됨</StatusBadge>
           {result.rejectedAt && (
             <p className="mt-2 text-xs text-muted-foreground">
               처리일:{' '}
@@ -158,10 +150,8 @@ function StatusSection({ result }: { result: LookupResult }) {
             </p>
           )}
           {result.rejectionReason && (
-            <div className="mt-4 rounded-lg border border-destructive/30 bg-destructive/5 p-4 text-sm">
-              <p className="text-xs uppercase tracking-wider text-destructive">
-                사유
-              </p>
+            <div className="mt-4 rounded-md border border-destructive/30 bg-destructive/5 p-4 text-sm">
+              <p className="text-xs font-medium text-destructive">사유</p>
               <p className="mt-1 leading-relaxed">{result.rejectionReason}</p>
             </div>
           )}
@@ -171,9 +161,7 @@ function StatusSection({ result }: { result: LookupResult }) {
     case 'CANCELLED':
       return (
         <div>
-          <StatusBadge color="stone" icon="🚫">
-            취소됨
-          </StatusBadge>
+          <StatusBadge color="stone">취소됨</StatusBadge>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
             해당 신청은 취소되었습니다. 재신청을 원하시면 분양 신청 페이지에서
             진행해주세요.
@@ -198,18 +186,15 @@ const COLOR_MAP: Record<Color, string> = {
 
 function StatusBadge({
   color,
-  icon,
   children,
 }: {
   color: Color
-  icon: string
   children: React.ReactNode
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-semibold ${COLOR_MAP[color]}`}
+      className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${COLOR_MAP[color]}`}
     >
-      <span aria-hidden>{icon}</span>
       {children}
     </span>
   )

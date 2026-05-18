@@ -4,15 +4,27 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { signOut } from 'next-auth/react'
 import { useTransition } from 'react'
+import {
+  LayoutDashboard,
+  ClipboardList,
+  Map as MapIcon,
+  Megaphone,
+  Settings,
+  type LucideIcon,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-const NAV = [
-  { href: '/admin', label: '대시보드', icon: '📊' },
-  { href: '/admin/applications', label: '신청 관리', icon: '📋' },
-  { href: '/admin/plots', label: '구획 현황', icon: '🗺️' },
-  { href: '/admin/announcements', label: '공지 관리', icon: '📢' },
-  { href: '/admin/settings', label: '설정', icon: '⚙️' },
+const NAV: ReadonlyArray<{
+  href: string
+  label: string
+  Icon: LucideIcon
+}> = [
+  { href: '/admin', label: '대시보드', Icon: LayoutDashboard },
+  { href: '/admin/applications', label: '신청 관리', Icon: ClipboardList },
+  { href: '/admin/plots', label: '구획 현황', Icon: MapIcon },
+  { href: '/admin/announcements', label: '공지 관리', Icon: Megaphone },
+  { href: '/admin/settings', label: '설정', Icon: Settings },
 ] as const
 
 export function AdminSidebar() {
@@ -26,41 +38,36 @@ export function AdminSidebar() {
   }
 
   return (
-    <aside className="hidden w-56 shrink-0 border-r border-border bg-muted/30 md:flex md:flex-col">
+    <aside className="hidden w-56 shrink-0 border-r border-border bg-secondary md:flex md:flex-col">
       <div className="border-b border-border p-4">
         <Link
           href="/admin"
-          className="flex items-center gap-2 text-base font-semibold"
+          className="font-heading text-base font-bold tracking-tight text-foreground"
         >
-          <span className="text-xl" role="img" aria-hidden>
-            🌱
-          </span>
           여월농장
         </Link>
-        <p className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">
-          Admin Console
+        <p className="mt-1 text-[11px] font-medium text-muted-foreground">
+          어드민 콘솔
         </p>
       </div>
 
       <nav className="flex-1 space-y-1 px-2 py-4" aria-label="어드민 메뉴">
-        {NAV.map((item) => {
+        {NAV.map(({ href, label, Icon }) => {
           const active =
-            item.href === '/admin'
-              ? pathname === '/admin'
-              : pathname.startsWith(item.href)
+            href === '/admin' ? pathname === '/admin' : pathname.startsWith(href)
           return (
             <Link
-              key={item.href}
-              href={item.href}
+              key={href}
+              href={href}
               className={cn(
-                'flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+                'flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium transition-colors',
                 active
                   ? 'bg-brand-100 text-brand-900'
                   : 'text-muted-foreground hover:bg-accent hover:text-foreground'
               )}
             >
-              <span aria-hidden>{item.icon}</span>
-              {item.label}
+              <Icon className="h-4 w-4" strokeWidth={1.75} aria-hidden />
+              {label}
             </Link>
           )
         })}

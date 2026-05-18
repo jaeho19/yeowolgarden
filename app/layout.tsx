@@ -37,7 +37,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#5d8a3a',
+  // leaf-700 (oklch(0.36 0.07 130)) 근사값 — 톤다운된 단단한 잎
+  themeColor: '#3e4f29',
   width: 'device-width',
   initialScale: 1,
 }
@@ -50,9 +51,21 @@ export default function RootLayout({
   return (
     <html lang="ko" className="h-full antialiased">
       <head>
+        {/* 본문: Pretendard Variable */}
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+        />
+        {/* 표제: Gowun Batang 본명조 (h1/h2/display — font-heading 클래스로 적용) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
         />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>

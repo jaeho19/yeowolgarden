@@ -10,11 +10,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* 농원 정보 */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-xl" role="img" aria-hidden>
-                🌱
-              </span>
-              <span className="font-semibold">여월농장</span>
+            <div className="mb-3 font-heading text-lg font-bold tracking-tight text-foreground">
+              여월농장
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               사업자: 농업회사법인 (유)호정

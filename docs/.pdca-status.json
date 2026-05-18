@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-05-18T02:07:00.409Z",
+  "lastUpdated": "2026-05-18T04:54:24.097Z",
   "activeFeatures": [
     "yeowol-farm-website",
     "db",
@@ -31,7 +31,9 @@
     "cancel",
     "(panel)",
     "recruitment",
-    "settings"
+    "settings",
+    "privacy",
+    "terms"
   ],
   "primaryFeature": "yeowol-farm-website",
   "features": {
@@ -125,9 +127,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-16T10:33:33.520Z",
-        "lastUpdated": "2026-05-18T01:51:34.556Z"
+        "lastUpdated": "2026-05-18T04:52:57.835Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\layout.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\middleware.ts"
     },
     "schemas": {
       "phase": "do",
@@ -164,9 +166,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T13:37:26.967Z",
-        "lastUpdated": "2026-05-18T02:07:00.409Z"
+        "lastUpdated": "2026-05-18T04:52:47.782Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\RecruitmentNotice.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\MobileBottomCTA.tsx"
     },
     "(public)": {
       "phase": "do",
@@ -190,7 +192,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:05:54.404Z",
-        "lastUpdated": "2026-05-18T02:06:30.344Z"
+        "lastUpdated": "2026-05-18T04:13:16.164Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\plots\\page.tsx"
     },
@@ -203,7 +205,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:06:54.328Z",
-        "lastUpdated": "2026-05-17T23:14:19.955Z"
+        "lastUpdated": "2026-05-18T03:43:31.111Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\access\\page.tsx"
     },
@@ -216,7 +218,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:08:26.209Z",
-        "lastUpdated": "2026-05-18T01:52:50.369Z"
+        "lastUpdated": "2026-05-18T03:44:23.033Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\about\\page.tsx"
     },
@@ -229,7 +231,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:09:19.727Z",
-        "lastUpdated": "2026-05-17T23:09:19.727Z"
+        "lastUpdated": "2026-05-18T03:48:35.550Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\gallery\\page.tsx"
     },
@@ -242,7 +244,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:11:26.762Z",
-        "lastUpdated": "2026-05-18T01:53:15.423Z"
+        "lastUpdated": "2026-05-18T03:48:15.239Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\faq\\page.tsx"
     },
@@ -268,7 +270,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:12:59.382Z",
-        "lastUpdated": "2026-05-18T01:19:55.857Z"
+        "lastUpdated": "2026-05-18T03:47:42.658Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\notice\\page.tsx"
     },
@@ -281,7 +283,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:26:08.824Z",
-        "lastUpdated": "2026-05-17T23:50:11.125Z"
+        "lastUpdated": "2026-05-18T04:04:44.702Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\applications\\page.tsx"
     },
@@ -320,7 +322,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:30:14.543Z",
-        "lastUpdated": "2026-05-18T01:20:07.969Z"
+        "lastUpdated": "2026-05-18T03:44:59.446Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\page.tsx"
     },
@@ -333,7 +335,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:31:21.949Z",
-        "lastUpdated": "2026-05-17T23:31:21.949Z"
+        "lastUpdated": "2026-05-18T03:46:02.956Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\success\\page.tsx"
     },
@@ -346,7 +348,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:33:04.066Z",
-        "lastUpdated": "2026-05-17T23:33:04.066Z"
+        "lastUpdated": "2026-05-18T03:46:51.773Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\status\\page.tsx"
     },
@@ -359,9 +361,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:42:38.076Z",
-        "lastUpdated": "2026-05-17T23:58:48.037Z"
+        "lastUpdated": "2026-05-18T04:07:09.874Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\components\\admin\\ApplicationActions.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\components\\admin\\RecruitmentToggle.tsx"
     },
     "login": {
       "phase": "do",
@@ -372,7 +374,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:42:53.879Z",
-        "lastUpdated": "2026-05-17T23:42:53.879Z"
+        "lastUpdated": "2026-05-18T04:03:00.091Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\login\\page.tsx"
     },
@@ -385,9 +387,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:46:42.389Z",
-        "lastUpdated": "2026-05-17T23:55:08.434Z"
+        "lastUpdated": "2026-05-18T04:05:58.929Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\announcements\\[id]\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\applications\\[id]\\page.tsx"
     },
     "approve": {
       "phase": "do",
@@ -450,7 +452,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:49:05.917Z",
-        "lastUpdated": "2026-05-17T23:49:05.917Z"
+        "lastUpdated": "2026-05-18T04:04:10.794Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\page.tsx"
     },
@@ -476,9 +478,35 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:57:23.840Z",
-        "lastUpdated": "2026-05-17T23:57:23.840Z"
+        "lastUpdated": "2026-05-18T04:06:24.344Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\settings\\page.tsx"
+    },
+    "privacy": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-18T04:53:42.242Z",
+        "lastUpdated": "2026-05-18T04:53:42.242Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\privacy\\page.tsx"
+    },
+    "terms": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-18T04:54:24.097Z",
+        "lastUpdated": "2026-05-18T04:54:24.097Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\terms\\page.tsx"
     }
   },
   "pipeline": {
@@ -510,7 +538,7 @@
   "session": {
     "startedAt": "2026-05-16T05:54:00.974Z",
     "onboardingCompleted": true,
-    "lastActivity": "2026-05-18T02:07:00.409Z"
+    "lastActivity": "2026-05-18T04:54:24.097Z"
   },
   "history": [
     {
@@ -1235,6 +1263,354 @@
     {
       "timestamp": "2026-05-18T02:07:00.409Z",
       "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T02:26:34.041Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T02:26:47.601Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T02:33:42.508Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T02:52:29.070Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:15:31.124Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:30:36.697Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:30:58.308Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:36:04.015Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:36:30.040Z",
+      "feature": "access",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:42:04.463Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:42:17.727Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:42:35.687Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:42:49.680Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:43:02.378Z",
+      "feature": "access",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:43:16.019Z",
+      "feature": "access",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:43:31.111Z",
+      "feature": "access",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:44:23.033Z",
+      "feature": "about",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:44:40.516Z",
+      "feature": "apply",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:44:59.446Z",
+      "feature": "apply",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:45:20.788Z",
+      "feature": "success",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:45:45.009Z",
+      "feature": "success",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:46:02.956Z",
+      "feature": "success",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:46:51.773Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:47:08.371Z",
+      "feature": "notice",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:47:25.500Z",
+      "feature": "notice",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:47:42.658Z",
+      "feature": "notice",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:47:58.641Z",
+      "feature": "faq",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:48:15.239Z",
+      "feature": "faq",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:48:35.550Z",
+      "feature": "gallery",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T03:49:34.680Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:00:25.037Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:00:47.464Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:01:03.255Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:01:24.273Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:01:37.795Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:01:51.697Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:02:06.432Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:03:00.091Z",
+      "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:03:24.542Z",
+      "feature": "(panel)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:03:56.596Z",
+      "feature": "(panel)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:04:10.794Z",
+      "feature": "(panel)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:04:28.235Z",
+      "feature": "applications",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:04:44.702Z",
+      "feature": "applications",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:05:03.750Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:05:17.636Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:05:39.922Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:05:58.929Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:06:12.597Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:06:24.344Z",
+      "feature": "settings",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:06:35.958Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:06:51.072Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:07:09.874Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:13:16.164Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:52:37.051Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:52:47.782Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:52:57.835Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:53:42.242Z",
+      "feature": "privacy",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T04:54:24.097Z",
+      "feature": "terms",
       "phase": "do",
       "action": "updated"
     }

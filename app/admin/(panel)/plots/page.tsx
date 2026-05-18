@@ -68,10 +68,12 @@ export default async function PlotsPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <header className="mb-6">
-        <p className="text-xs uppercase tracking-wider text-muted-foreground">
+        <p className="text-xs font-medium text-muted-foreground">
           {seasonYear} 시즌
         </p>
-        <h1 className="mt-1 text-2xl font-bold sm:text-3xl">구획 현황</h1>
+        <h1 className="mt-1 font-heading text-2xl font-bold tracking-tight sm:text-3xl">
+          구획 현황
+        </h1>
         <p className="mt-1 text-sm text-muted-foreground">
           전체 {total}구획 · 가용 {counts.AVAILABLE} · 예약 {counts.RESERVED} ·
           점유 {counts.OCCUPIED}

@@ -25,14 +25,22 @@ export default async function ApplyPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-50 via-background to-background py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="mb-3 text-sm font-medium tracking-wider uppercase text-brand-700">
+      {/* Hero — sub-page 종이톤 패턴 */}
+      <section
+        className="border-b border-border bg-secondary py-12 sm:py-16"
+        aria-labelledby="apply-hero-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-medium text-brand-700">
             {seasonYear} 시즌 분양 신청
           </p>
-          <h1 className="text-3xl font-bold sm:text-4xl">분양 신청</h1>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+          <h1
+            id="apply-hero-heading"
+            className="mt-3 font-heading text-h1 font-bold leading-[1.15] tracking-tight text-foreground"
+          >
+            분양 신청
+          </h1>
+          <p className="mt-5 text-base text-muted-foreground sm:text-lg">
             모든 구획 균일 5평 · 100,000원 · 인접 자동 배정
           </p>
         </div>
@@ -69,20 +77,17 @@ export default async function ApplyPage() {
 
 function ClosedNotice({ seasonYear }: { seasonYear: number }) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-sm sm:p-12">
-      <span className="text-5xl" role="img" aria-hidden>
-        🌾
-      </span>
-      <h2 className="mt-5 text-xl font-bold sm:text-2xl">
+    <div className="rounded-md border border-border bg-card p-8 sm:p-12">
+      <p className="text-sm font-medium text-brand-700">분양 신청 안내</p>
+      <h2 className="mt-3 font-heading text-h2 font-bold leading-tight tracking-tight text-foreground">
         현재 분양 신청을 받지 않고 있습니다
       </h2>
-      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-        {seasonYear} 시즌 분양 일정은 공지사항을 통해 안내드립니다.
-        <br />
-        다음 시즌을 기대해주세요.
+      <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+        {seasonYear} 시즌 분양 일정은 공지사항을 통해 안내드립니다. 다음 시즌을
+        기대해주세요.
       </p>
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-        <LinkButton href="/notice">📢 공지사항 보기</LinkButton>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <LinkButton href="/notice">공지사항 보기 →</LinkButton>
         <LinkButton href="/plots" variant="outline">
           분양 안내 다시 보기
         </LinkButton>

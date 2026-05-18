@@ -20,10 +20,12 @@ export default async function SettingsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
       <header className="mb-6">
-        <p className="text-xs uppercase tracking-wider text-muted-foreground">
+        <p className="text-xs font-medium text-muted-foreground">
           {seasonYear} 시즌
         </p>
-        <h1 className="mt-1 text-2xl font-bold sm:text-3xl">설정</h1>
+        <h1 className="mt-1 font-heading text-2xl font-bold tracking-tight sm:text-3xl">
+          설정
+        </h1>
       </header>
 
       <section className="space-y-6">

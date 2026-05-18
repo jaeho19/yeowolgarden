@@ -30,14 +30,20 @@ export default async function NoticePage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-50 via-background to-background py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="mb-3 text-sm font-medium tracking-wider uppercase text-brand-700">
+      {/* Hero — sub-page 종이톤 패턴 */}
+      <section
+        className="border-b border-border bg-secondary py-12 sm:py-16"
+        aria-labelledby="notice-hero-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-medium text-brand-700">공지사항</p>
+          <h1
+            id="notice-hero-heading"
+            className="mt-3 font-heading text-h1 font-bold leading-[1.15] tracking-tight text-foreground"
+          >
             공지사항
-          </p>
-          <h1 className="text-3xl font-bold sm:text-4xl">공지사항</h1>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+          </h1>
+          <p className="mt-5 text-base text-muted-foreground sm:text-lg">
             여월농장의 분양·운영 관련 공지를 확인하세요.
           </p>
         </div>
@@ -59,13 +65,21 @@ export default async function NoticePage() {
                       : 'rounded-xl border border-border bg-card p-5 shadow-sm sm:p-6'
                   }
                 >
-                  <div className="mb-3 flex flex-wrap items-center gap-2">
+                  <div className="mb-3 flex flex-wrap items-center gap-3">
                     {a.isPinned ? (
-                      <span className="inline-flex items-center rounded-full bg-brand-500 px-2 py-0.5 text-xs font-medium text-white">
-                        📌 중요
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-brand-700">
+                        <span
+                          className="h-1.5 w-1.5 rounded-full bg-brand-500"
+                          aria-hidden
+                        />
+                        중요
                       </span>
                     ) : (
-                      <span className="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+                        <span
+                          className="h-1.5 w-1.5 rounded-full bg-muted-foreground/40"
+                          aria-hidden
+                        />
                         일반
                       </span>
                     )}
@@ -107,14 +121,14 @@ export default async function NoticePage() {
       </section>
 
       {/* 하단 CTA */}
-      <section className="bg-muted/30 py-12">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+      <section className="border-t border-border bg-secondary py-12">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm text-muted-foreground">
             신청 상태가 궁금하신가요?
           </p>
-          <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <LinkButton href="/apply/status" variant="outline">
-              📋 본인 신청 조회
+              본인 신청 조회
             </LinkButton>
             <LinkButton href="/apply">분양 신청하기 →</LinkButton>
           </div>
@@ -126,11 +140,8 @@ export default async function NoticePage() {
 
 function EmptyState() {
   return (
-    <div className="rounded-2xl border border-dashed border-border bg-card p-12 text-center">
-      <span className="text-4xl" role="img" aria-hidden>
-        📭
-      </span>
-      <p className="mt-4 text-sm text-muted-foreground">
+    <div className="rounded-md border border-dashed border-border bg-card p-12 text-center">
+      <p className="text-sm text-muted-foreground">
         아직 등록된 공지사항이 없습니다.
       </p>
     </div>

@@ -118,14 +118,20 @@ const FAQS: readonly FaqGroup[] = [
 export default function FaqPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-50 via-background to-background py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="mb-3 text-sm font-medium tracking-wider uppercase text-brand-700">
-            FAQ
-          </p>
-          <h1 className="text-3xl font-bold sm:text-4xl">자주 묻는 질문</h1>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+      {/* Hero — sub-page 종이톤 패턴 */}
+      <section
+        className="border-b border-border bg-secondary py-12 sm:py-16"
+        aria-labelledby="faq-hero-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-medium text-brand-700">자주 묻는 질문</p>
+          <h1
+            id="faq-hero-heading"
+            className="mt-3 font-heading text-h1 font-bold leading-[1.15] tracking-tight text-foreground"
+          >
+            자주 묻는 질문
+          </h1>
+          <p className="mt-5 max-w-[58ch] text-base text-muted-foreground sm:text-lg">
             여기에서 답을 찾지 못하셨다면 운영자에게 직접 문의해주세요.
           </p>
         </div>
@@ -157,15 +163,15 @@ export default function FaqPage() {
       </section>
 
       {/* 문의 CTA */}
-      <section className="bg-brand-50/60 py-12">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl font-bold sm:text-2xl">
+      <section className="border-t border-border bg-secondary py-14 sm:py-16">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-h2 font-bold leading-tight tracking-tight text-foreground">
             더 궁금한 점이 있으신가요?
           </h2>
-          <p className="mt-3 text-sm text-muted-foreground">
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             운영자에게 직접 문의하시거나, 분양 신청 폼의 메모란을 활용해주세요.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <LinkButton href="/apply" size="lg">
               분양 신청하기 →
             </LinkButton>

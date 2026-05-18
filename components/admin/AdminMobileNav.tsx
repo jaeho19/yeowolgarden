@@ -3,7 +3,15 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Menu } from 'lucide-react'
+import {
+  Menu,
+  LayoutDashboard,
+  ClipboardList,
+  Map as MapIcon,
+  Megaphone,
+  Settings,
+  type LucideIcon,
+} from 'lucide-react'
 import { signOut } from 'next-auth/react'
 import {
   Sheet,
@@ -14,12 +22,16 @@ import {
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-const NAV = [
-  { href: '/admin', label: '대시보드', icon: '📊' },
-  { href: '/admin/applications', label: '신청 관리', icon: '📋' },
-  { href: '/admin/plots', label: '구획 현황', icon: '🗺️' },
-  { href: '/admin/announcements', label: '공지 관리', icon: '📢' },
-  { href: '/admin/settings', label: '설정', icon: '⚙️' },
+const NAV: ReadonlyArray<{
+  href: string
+  label: string
+  Icon: LucideIcon
+}> = [
+  { href: '/admin', label: '대시보드', Icon: LayoutDashboard },
+  { href: '/admin/applications', label: '신청 관리', Icon: ClipboardList },
+  { href: '/admin/plots', label: '구획 현황', Icon: MapIcon },
+  { href: '/admin/announcements', label: '공지 관리', Icon: Megaphone },
+  { href: '/admin/settings', label: '설정', Icon: Settings },
 ] as const
 
 export function AdminMobileNav() {
@@ -27,12 +39,12 @@ export function AdminMobileNav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-border bg-background/95 px-4 backdrop-blur md:hidden">
-      <Link href="/admin" className="flex items-center gap-2 font-semibold">
-        <span className="text-lg" role="img" aria-hidden>
-          🌱
-        </span>
-        여월농장 Admin
+    <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-border bg-background px-4 md:hidden">
+      <Link
+        href="/admin"
+        className="font-heading text-base font-bold tracking-tight text-foreground"
+      >
+        여월농장 어드민
       </Link>
 
       <Sheet open={open} onOpenChange={setOpen}>
@@ -50,25 +62,25 @@ export function AdminMobileNav() {
             className="flex flex-col gap-1 p-2"
             aria-label="모바일 어드민 메뉴"
           >
-            {NAV.map((item) => {
+            {NAV.map(({ href, label, Icon }) => {
               const active =
-                item.href === '/admin'
+                href === '/admin'
                   ? pathname === '/admin'
-                  : pathname.startsWith(item.href)
+                  : pathname.startsWith(href)
               return (
                 <Link
-                  key={item.href}
-                  href={item.href}
+                  key={href}
+                  href={href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    'flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-colors',
+                    'flex items-center gap-2.5 rounded-md px-3 py-2.5 text-sm font-medium transition-colors',
                     active
                       ? 'bg-brand-100 text-brand-900'
                       : 'text-foreground hover:bg-accent'
                   )}
                 >
-                  <span aria-hidden>{item.icon}</span>
-                  {item.label}
+                  <Icon className="h-4 w-4" strokeWidth={1.75} aria-hidden />
+                  {label}
                 </Link>
               )
             })}

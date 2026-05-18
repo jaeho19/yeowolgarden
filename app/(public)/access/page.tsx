@@ -48,16 +48,54 @@ const TRANSIT_GUIDE = [
 export default function AccessPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-50 via-background to-background py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="mb-3 text-sm font-medium tracking-wider uppercase text-brand-700">
-            오시는 길
-          </p>
-          <h1 className="text-3xl font-bold sm:text-4xl">서울에서 차로 30분</h1>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            {FARM_ADDRESS}
-          </p>
+      {/* Hero — 풀폭 사진 + 명조 표제 + 정보 띠 (홈 Hero와 동일 패턴) */}
+      <section className="relative bg-background" aria-labelledby="access-hero-heading">
+        <div className="relative h-[50vh] min-h-[380px] w-full overflow-hidden bg-muted sm:h-[58vh] sm:min-h-[460px]">
+          <img
+            src="/gallery/KakaoTalk_20260516_150830179_07.jpg"
+            alt="여월농장 가는 길"
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/65 via-black/25 to-transparent"
+          />
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
+              <p className="text-sm font-medium text-white/90">오시는 길</p>
+              <h1
+                id="access-hero-heading"
+                className="mt-3 max-w-3xl font-heading text-display font-bold leading-[1.08] tracking-tight text-white"
+              >
+                서울에서 30분,
+                <br />
+                부천 여월동
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-b border-border bg-background">
+          <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-10 lg:px-8">
+            <dl className="grid grid-cols-3 gap-x-8 gap-y-1.5 text-sm sm:gap-x-12">
+              <dt className="text-muted-foreground">주소</dt>
+              <dt className="text-muted-foreground">자가용</dt>
+              <dt className="text-muted-foreground">대중교통</dt>
+              <dd className="font-medium text-foreground">{FARM_ADDRESS}</dd>
+              <dd className="font-medium text-foreground">서울 30분 · 인천 25분</dd>
+              <dd className="font-medium text-foreground">부천역 + 75-1번 20분</dd>
+            </dl>
+            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+              <LinkButton href={NAVER_DIRECTIONS} target="_blank" rel="noreferrer" size="lg">
+                네이버 길찾기 →
+              </LinkButton>
+              <LinkButton href={KAKAO_MAP_URL} target="_blank" rel="noreferrer" variant="outline" size="lg">
+                카카오맵
+              </LinkButton>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -78,20 +116,10 @@ export default function AccessPage() {
             />
           </div>
 
+          {/* Hero 정보 띠에 네이버·카카오 길찾기가 있으므로 여기는 T-map(모바일 전용)만 노출 */}
           <div className="mt-5 flex flex-wrap justify-center gap-3">
-            <LinkButton href={NAVER_DIRECTIONS} target="_blank" rel="noreferrer">
-              🗺️ 네이버 길찾기
-            </LinkButton>
-            <LinkButton
-              href={KAKAO_MAP_URL}
-              target="_blank"
-              rel="noreferrer"
-              variant="outline"
-            >
-              카카오맵에서 보기
-            </LinkButton>
             <LinkButton href={TMAP_URL} variant="outline">
-              T-map (모바일)
+              T-map으로 길찾기 (모바일)
             </LinkButton>
           </div>
         </div>
@@ -100,8 +128,8 @@ export default function AccessPage() {
       {/* 자가용 안내 */}
       <section className="py-12" aria-labelledby="car-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 id="car-heading" className="text-xl font-bold sm:text-2xl">
-            🚗 자가용으로
+          <h2 id="car-heading" className="font-heading text-h2 font-bold leading-tight tracking-tight text-foreground">
+            자가용으로
           </h2>
           <ul className="mt-5 space-y-3">
             {CAR_GUIDE.map((g) => (
@@ -121,10 +149,10 @@ export default function AccessPage() {
       </section>
 
       {/* 대중교통 */}
-      <section className="bg-muted/30 py-12" aria-labelledby="transit-heading">
+      <section className="bg-secondary py-12" aria-labelledby="transit-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 id="transit-heading" className="text-xl font-bold sm:text-2xl">
-            🚇 대중교통으로
+          <h2 id="transit-heading" className="font-heading text-h2 font-bold leading-tight tracking-tight text-foreground">
+            대중교통으로
           </h2>
           <ul className="mt-5 space-y-3">
             {TRANSIT_GUIDE.map((g) => (

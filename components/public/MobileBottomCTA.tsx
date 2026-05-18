@@ -16,7 +16,7 @@ export function MobileBottomCTA() {
   if (hidden) return null
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-30 border-t border-border bg-background/95 backdrop-blur p-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)]">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-30 border-t border-border bg-background p-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)]">
       <LinkButton href="/apply" size="lg" className="w-full">
         분양 신청하기
       </LinkButton>

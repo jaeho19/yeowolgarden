@@ -49,7 +49,7 @@ export default async function ApplicationDetailPage({ params }: PageProps) {
           ← 신청 목록
         </Link>
         <div className="mt-2 flex flex-wrap items-center gap-3">
-          <h1 className="text-2xl font-bold sm:text-3xl">
+          <h1 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
             #{app.applicationNumber} {app.name}
           </h1>
           <StatusBadge status={app.status} />
@@ -60,10 +60,8 @@ export default async function ApplicationDetailPage({ params }: PageProps) {
       </header>
 
       {/* 액션 */}
-      <section className="mb-8 rounded-xl border border-border bg-card p-5 shadow-sm">
-        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-          액션
-        </h2>
+      <section className="mb-8 rounded-md border border-border bg-card p-5">
+        <h2 className="mb-3 text-sm font-bold text-muted-foreground">액션</h2>
         <ApplicationActions
           applicationId={app.id}
           status={app.status}
@@ -87,7 +85,7 @@ export default async function ApplicationDetailPage({ params }: PageProps) {
           <Row label="결제 금액" value={formatKrw(app.totalPriceKrw)} />
           <Row
             label="개인정보 동의"
-            value={app.privacyAgreed ? '✅ 동의' : '❌ 미동의'}
+            value={app.privacyAgreed ? '동의' : '미동의'}
           />
         </DetailCard>
 
@@ -139,21 +137,19 @@ export default async function ApplicationDetailPage({ params }: PageProps) {
 
       {/* 거절/내부 메모 */}
       {(app.rejectionReason || app.adminNote) && (
-        <section className="mb-8 rounded-xl border border-border bg-card p-5 shadow-sm">
-          <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-            메모
-          </h2>
+        <section className="mb-8 rounded-md border border-border bg-card p-5">
+          <h2 className="mb-3 text-sm font-bold text-muted-foreground">메모</h2>
           {app.rejectionReason && (
-            <div className="mb-3 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm">
-              <p className="text-xs uppercase tracking-wider text-destructive">
+            <div className="mb-3 rounded-md border border-destructive/30 bg-destructive/5 p-3 text-sm">
+              <p className="text-xs font-medium text-destructive">
                 거절 사유 (신청자에게 표시)
               </p>
               <p className="mt-1 leading-relaxed">{app.rejectionReason}</p>
             </div>
           )}
           {app.adminNote && (
-            <div className="rounded-lg bg-muted/40 p-3 text-sm">
-              <p className="text-xs uppercase tracking-wider text-muted-foreground">
+            <div className="rounded-md bg-muted/40 p-3 text-sm">
+              <p className="text-xs font-medium text-muted-foreground">
                 내부 메모
               </p>
               <p className="mt-1 leading-relaxed whitespace-pre-line">
@@ -165,8 +161,8 @@ export default async function ApplicationDetailPage({ params }: PageProps) {
       )}
 
       {/* 감사 로그 */}
-      <section className="rounded-xl border border-border bg-card p-5 shadow-sm">
-        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
+      <section className="rounded-md border border-border bg-card p-5">
+        <h2 className="mb-3 text-sm font-bold text-muted-foreground">
           감사 로그 ({logs.length})
         </h2>
         {logs.length === 0 ? (
@@ -211,10 +207,8 @@ function DetailCard({
   children: React.ReactNode
 }) {
   return (
-    <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
-      <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-        {title}
-      </h3>
+    <div className="rounded-md border border-border bg-card p-5">
+      <h3 className="mb-3 text-sm font-bold text-muted-foreground">{title}</h3>
       <dl className="space-y-2 text-sm">{children}</dl>
     </div>
   )

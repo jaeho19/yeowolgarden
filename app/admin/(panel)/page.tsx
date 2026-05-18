@@ -8,6 +8,13 @@
  *  - 빠른 액션 링크
  */
 import Link from 'next/link'
+import {
+  Clock,
+  RefreshCw,
+  Map as MapIcon,
+  Megaphone,
+  type LucideIcon,
+} from 'lucide-react'
 import { and, eq, sql } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { applications } from '@/db/schema'
@@ -71,17 +78,31 @@ export default async function AdminDashboardPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <header className="mb-8">
-        <p className="text-xs uppercase tracking-wider text-muted-foreground">
+        <p className="text-xs font-medium text-muted-foreground">
           {data.seasonYear} 시즌
         </p>
-        <h1 className="mt-1 text-2xl font-bold sm:text-3xl">대시보드</h1>
+        <h1 className="mt-1 font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          대시보드
+        </h1>
       </header>
 
       {/* 핵심 지표 */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard
           label="모집 상태"
-          value={data.availability.recruitmentOpen ? '🟢 모집 중' : '🔴 마감'}
+          value={
+            <span className="inline-flex items-center gap-2">
+              <span
+                className={
+                  data.availability.recruitmentOpen
+                    ? 'h-2.5 w-2.5 rounded-full bg-brand-500'
+                    : 'h-2.5 w-2.5 rounded-full bg-destructive'
+                }
+                aria-hidden
+              />
+              {data.availability.recruitmentOpen ? '모집 중' : '마감'}
+            </span>
+          }
           hint={
             <Link
               href="/admin/settings"
@@ -117,18 +138,22 @@ export default async function AdminDashboardPage() {
 
       {/* 상태별 카운트 */}
       <section className="mt-10">
-        <h2 className="mb-4 text-lg font-bold">상태별 신청 수</h2>
+        <h2 className="mb-4 font-heading text-lg font-bold tracking-tight">
+          상태별 신청 수
+        </h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
           {data.byStatus.map((s) => (
             <Link
               key={s.status}
               href={`/admin/applications?status=${s.status}`}
-              className="rounded-lg border border-border bg-card p-4 text-center shadow-sm transition hover:bg-accent"
+              className="rounded-md border border-border bg-card p-4 text-center transition hover:bg-accent"
             >
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">
+              <div className="text-xs font-medium text-muted-foreground">
                 {statusLabel(s.status)}
               </div>
-              <div className="mt-1 text-2xl font-bold">{s.count}</div>
+              <div className="mt-1 font-heading text-2xl font-bold tabular-nums">
+                {s.count}
+              </div>
             </Link>
           ))}
         </div>
@@ -136,22 +161,28 @@ export default async function AdminDashboardPage() {
 
       {/* 빠른 액션 */}
       <section className="mt-10">
-        <h2 className="mb-4 text-lg font-bold">빠른 액션</h2>
+        <h2 className="mb-4 font-heading text-lg font-bold tracking-tight">
+          빠른 액션
+        </h2>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <QuickAction
             href="/admin/applications?status=PENDING"
-            icon="⏳"
+            Icon={Clock}
             label="입금 대기 확인"
           />
           <QuickAction
             href="/admin/applications?status=PAID"
-            icon="🔄"
+            Icon={RefreshCw}
             label="수동 배정 대기"
           />
-          <QuickAction href="/admin/plots" icon="🗺️" label="구획 현황 보기" />
+          <QuickAction
+            href="/admin/plots"
+            Icon={MapIcon}
+            label="구획 현황 보기"
+          />
           <QuickAction
             href="/admin/announcements"
-            icon="📢"
+            Icon={Megaphone}
             label="공지 작성"
           />
         </div>
@@ -170,11 +201,11 @@ function StatCard({
   hint?: React.ReactNode
 }) {
   return (
-    <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
-      <div className="text-xs uppercase tracking-wider text-muted-foreground">
-        {label}
+    <div className="rounded-md border border-border bg-card p-5">
+      <div className="text-xs font-medium text-muted-foreground">{label}</div>
+      <div className="mt-2 font-heading text-2xl font-bold tabular-nums">
+        {value}
       </div>
-      <div className="mt-2 text-2xl font-bold">{value}</div>
       {hint && <div className="mt-2 text-xs text-muted-foreground">{hint}</div>}
     </div>
   )
@@ -182,21 +213,19 @@ function StatCard({
 
 function QuickAction({
   href,
-  icon,
+  Icon,
   label,
 }: {
   href: string
-  icon: string
+  Icon: LucideIcon
   label: string
 }) {
   return (
     <Link
       href={href}
-      className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-sm transition hover:border-brand-200 hover:bg-accent"
+      className="flex items-center gap-3 rounded-md border border-border bg-card p-4 transition hover:border-brand-200 hover:bg-accent"
     >
-      <span className="text-2xl" aria-hidden>
-        {icon}
-      </span>
+      <Icon className="h-5 w-5 text-brand-700" strokeWidth={1.75} aria-hidden />
       <span className="text-sm font-medium">{label}</span>
     </Link>
   )
