@@ -210,31 +210,41 @@ export default async function ApplicationsListPage({ searchParams }: PageProps) 
             조건에 맞는 신청이 없습니다.
           </p>
         ) : (
-          data.rows.map((a) => (
-            <Link
-              key={a.id}
-              href={`/admin/applications/${a.id}`}
-              className="block rounded-lg border border-border bg-card p-4 shadow-sm transition hover:bg-accent"
-            >
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <p className="font-mono text-sm font-bold">
-                    #{a.applicationNumber} · {a.name}
-                  </p>
-                  <p className="mt-0.5 text-xs text-muted-foreground">
-                    {a.phone} · {a.desiredCount}구좌 ({a.desiredCount * 5}평)
-                  </p>
+          data.rows.map((a) => {
+            const plotNums: number[] = a.plotNumbers
+              ? (JSON.parse(a.plotNumbers) as number[])
+              : []
+            return (
+              <Link
+                key={a.id}
+                href={`/admin/applications/${a.id}`}
+                className="block rounded-lg border border-border bg-card p-4 shadow-sm transition touch-manipulation hover:bg-accent"
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <p className="font-mono text-sm font-bold">
+                      #{a.applicationNumber} · {a.name}
+                    </p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">
+                      {a.phone} · {a.desiredCount}구좌 ({a.desiredCount * 5}평)
+                    </p>
+                  </div>
+                  <StatusBadge status={a.status} />
                 </div>
-                <StatusBadge status={a.status} />
-              </div>
-              <p className="mt-2 flex items-center justify-between text-xs">
-                <span className="text-muted-foreground">
-                  {format(a.createdAt, 'MM-dd HH:mm', { locale: ko })}
-                </span>
-                <span className="font-medium">{formatKrw(a.totalPriceKrw)}</span>
-              </p>
-            </Link>
-          ))
+                {plotNums.length > 0 && (
+                  <p className="mt-2 font-mono text-xs text-muted-foreground">
+                    배정 구획 {plotNums.map((n) => `#${n}`).join(', ')}
+                  </p>
+                )}
+                <p className="mt-2 flex items-center justify-between text-xs">
+                  <span className="text-muted-foreground">
+                    {format(a.createdAt, 'MM-dd HH:mm', { locale: ko })}
+                  </span>
+                  <span className="font-medium">{formatKrw(a.totalPriceKrw)}</span>
+                </p>
+              </Link>
+            )
+          })
         )}
       </div>
     </div>

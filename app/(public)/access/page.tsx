@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { LinkButton } from '@/components/public/LinkButton'
 
@@ -51,12 +52,14 @@ export default function AccessPage() {
       {/* Hero — 풀폭 사진 + 명조 표제 + 정보 띠 (홈 Hero와 동일 패턴) */}
       <section className="relative bg-background" aria-labelledby="access-hero-heading">
         <div className="relative h-[50vh] min-h-[380px] w-full overflow-hidden bg-muted sm:h-[58vh] sm:min-h-[460px]">
-          <img
+          <Image
             src="/gallery/KakaoTalk_20260516_150830179_07.jpg"
             alt="여월농장 가는 길"
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-            fetchPriority="high"
+            fill
+            sizes="100vw"
+            priority
+            quality={85}
+            className="editorial-photo object-cover"
           />
           <div
             aria-hidden

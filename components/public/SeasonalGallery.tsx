@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 /**
@@ -26,7 +27,7 @@ const SMALL_IMAGES = [
     isIllust: false,
   },
   {
-    src: '/gallery/illust-lettuce-closeup.png',
+    src: '/gallery/illust-lettuce-closeup.webp',
     alt: '갓 자란 상추 한 포기',
     isIllust: true,
   },
@@ -36,7 +37,7 @@ const SMALL_IMAGES = [
     isIllust: false,
   },
   {
-    src: '/gallery/illust-planting-hands.png',
+    src: '/gallery/illust-planting-hands.webp',
     alt: '모종을 흙에 심는 손',
     isIllust: true,
   },
@@ -65,11 +66,12 @@ export function SeasonalGallery() {
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-12 sm:items-stretch sm:gap-4">
           {/* 큰 사진 (좌측 7칸, 4:5 세로형) */}
           <figure className="relative aspect-[4/5] overflow-hidden rounded-md border border-border bg-muted sm:col-span-7">
-            <img
+            <Image
               src={BIG_IMAGE.src}
               alt={BIG_IMAGE.alt}
-              className="editorial-photo absolute inset-0 h-full w-full object-cover"
-              loading="lazy"
+              fill
+              sizes="(max-width: 640px) 100vw, 60vw"
+              className="editorial-photo object-cover"
             />
           </figure>
 
@@ -80,11 +82,12 @@ export function SeasonalGallery() {
                 key={img.src}
                 className="relative aspect-square overflow-hidden rounded-md border border-border bg-muted sm:aspect-auto"
               >
-                <img
+                <Image
                   src={img.src}
                   alt={img.alt}
-                  className="editorial-photo absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="editorial-photo object-cover"
                 />
                 {img.isIllust && (
                   <span className="absolute bottom-2 right-2 rounded-sm bg-black/55 px-1.5 py-0.5 text-[11px] font-medium text-white/90">

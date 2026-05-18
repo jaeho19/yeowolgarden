@@ -52,6 +52,7 @@ export function AdminLoginForm() {
           id="admin-id"
           type="text"
           autoComplete="username"
+          enterKeyHint="next"
           required
           value={id}
           onChange={(e) => setId(e.target.value)}
@@ -69,6 +70,7 @@ export function AdminLoginForm() {
           id="admin-pw"
           type="password"
           autoComplete="current-password"
+          enterKeyHint="go"
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}

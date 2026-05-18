@@ -54,7 +54,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start md:gap-12">
             <figure className="relative aspect-[4/5] overflow-hidden rounded-md border border-border bg-muted">
               <Image
-                src="/gallery/illust-family-tending.png"
+                src="/gallery/illust-family-tending.webp"
                 alt="가족이 텃밭에서 작물을 가꾸는 모습"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
