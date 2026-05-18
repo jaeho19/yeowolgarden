@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-05-17T13:45:24.003Z",
+  "lastUpdated": "2026-05-17T23:58:48.037Z",
   "activeFeatures": [
     "yeowol-farm-website",
     "db",
@@ -8,7 +8,30 @@
     "schemas",
     "scripts",
     "public",
-    "(public)"
+    "(public)",
+    "plots",
+    "access",
+    "about",
+    "gallery",
+    "faq",
+    "announcements",
+    "notice",
+    "applications",
+    "lookup",
+    "availability",
+    "apply",
+    "success",
+    "status",
+    "admin",
+    "login",
+    "[id]",
+    "approve",
+    "assign",
+    "reject",
+    "cancel",
+    "(panel)",
+    "recruitment",
+    "settings"
   ],
   "primaryFeature": "yeowol-farm-website",
   "features": {
@@ -102,9 +125,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-16T10:33:33.520Z",
-        "lastUpdated": "2026-05-17T13:41:43.166Z"
+        "lastUpdated": "2026-05-17T23:45:45.180Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\layout.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\lib\\allocation.ts"
     },
     "schemas": {
       "phase": "do",
@@ -115,9 +138,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-16T10:33:54.111Z",
-        "lastUpdated": "2026-05-16T10:34:13.934Z"
+        "lastUpdated": "2026-05-17T23:58:05.006Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\lib\\schemas\\index.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\lib\\schemas\\announcement.ts"
     },
     "scripts": {
       "phase": "do",
@@ -141,9 +164,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T13:37:26.967Z",
-        "lastUpdated": "2026-05-17T13:45:24.003Z"
+        "lastUpdated": "2026-05-17T23:32:48.046Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\Header.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\LookupForm.tsx"
     },
     "(public)": {
       "phase": "do",
@@ -157,6 +180,305 @@
         "lastUpdated": "2026-05-17T13:41:32.935Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\page.tsx"
+    },
+    "plots": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:05:54.404Z",
+        "lastUpdated": "2026-05-17T23:54:05.743Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\plots\\page.tsx"
+    },
+    "access": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:06:54.328Z",
+        "lastUpdated": "2026-05-17T23:14:19.955Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\access\\page.tsx"
+    },
+    "about": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:08:26.209Z",
+        "lastUpdated": "2026-05-17T23:08:26.209Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\about\\page.tsx"
+    },
+    "gallery": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:09:19.727Z",
+        "lastUpdated": "2026-05-17T23:09:19.727Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\gallery\\page.tsx"
+    },
+    "faq": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:11:26.762Z",
+        "lastUpdated": "2026-05-17T23:11:26.762Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\faq\\page.tsx"
+    },
+    "announcements": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:12:31.711Z",
+        "lastUpdated": "2026-05-17T23:56:18.738Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\announcements\\page.tsx"
+    },
+    "notice": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:12:59.382Z",
+        "lastUpdated": "2026-05-17T23:12:59.382Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\notice\\page.tsx"
+    },
+    "applications": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:26:08.824Z",
+        "lastUpdated": "2026-05-17T23:50:11.125Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\applications\\page.tsx"
+    },
+    "lookup": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:26:46.755Z",
+        "lastUpdated": "2026-05-17T23:26:46.755Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\applications\\lookup\\route.ts"
+    },
+    "availability": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:27:11.948Z",
+        "lastUpdated": "2026-05-17T23:27:11.948Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\plots\\availability\\route.ts"
+    },
+    "apply": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:30:14.543Z",
+        "lastUpdated": "2026-05-17T23:30:14.543Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\page.tsx"
+    },
+    "success": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:31:21.949Z",
+        "lastUpdated": "2026-05-17T23:31:21.949Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\success\\page.tsx"
+    },
+    "status": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:33:04.066Z",
+        "lastUpdated": "2026-05-17T23:33:04.066Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\status\\page.tsx"
+    },
+    "admin": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:42:38.076Z",
+        "lastUpdated": "2026-05-17T23:58:48.037Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\components\\admin\\ApplicationActions.tsx"
+    },
+    "login": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:42:53.879Z",
+        "lastUpdated": "2026-05-17T23:42:53.879Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\login\\page.tsx"
+    },
+    "[id]": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:46:42.389Z",
+        "lastUpdated": "2026-05-17T23:55:08.434Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\announcements\\[id]\\route.ts"
+    },
+    "approve": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:46:57.759Z",
+        "lastUpdated": "2026-05-17T23:46:57.759Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\approve\\route.ts"
+    },
+    "assign": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:47:18.615Z",
+        "lastUpdated": "2026-05-17T23:47:18.615Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\assign\\route.ts"
+    },
+    "reject": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:47:34.557Z",
+        "lastUpdated": "2026-05-17T23:47:34.557Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\reject\\route.ts"
+    },
+    "cancel": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:47:55.026Z",
+        "lastUpdated": "2026-05-17T23:47:55.026Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\cancel\\route.ts"
+    },
+    "(panel)": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:49:05.917Z",
+        "lastUpdated": "2026-05-17T23:49:05.917Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\page.tsx"
+    },
+    "recruitment": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:56:49.042Z",
+        "lastUpdated": "2026-05-17T23:56:49.042Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\settings\\recruitment\\route.ts"
+    },
+    "settings": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-05-17T23:57:23.840Z",
+        "lastUpdated": "2026-05-17T23:57:23.840Z"
+      },
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\settings\\page.tsx"
     }
   },
   "pipeline": {
@@ -188,7 +510,7 @@
   "session": {
     "startedAt": "2026-05-16T05:54:00.974Z",
     "onboardingCompleted": true,
-    "lastActivity": "2026-05-17T13:45:24.003Z"
+    "lastActivity": "2026-05-17T23:58:48.037Z"
   },
   "history": [
     {
@@ -421,6 +743,378 @@
     {
       "timestamp": "2026-05-17T13:45:24.003Z",
       "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:05:54.404Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:06:54.328Z",
+      "feature": "access",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:08:26.209Z",
+      "feature": "about",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:08:55.947Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:09:19.727Z",
+      "feature": "gallery",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:11:26.762Z",
+      "feature": "faq",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:12:31.711Z",
+      "feature": "announcements",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:12:59.382Z",
+      "feature": "notice",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:14:19.955Z",
+      "feature": "access",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:23:47.798Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:24:08.914Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:24:21.026Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:24:31.831Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:25:01.167Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:25:22.935Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:26:08.824Z",
+      "feature": "applications",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:26:46.755Z",
+      "feature": "lookup",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:27:11.948Z",
+      "feature": "availability",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:29:07.982Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:29:49.314Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:30:14.543Z",
+      "feature": "apply",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:30:44.118Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:31:21.949Z",
+      "feature": "success",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:32:22.927Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:32:48.046Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:33:04.066Z",
+      "feature": "status",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:40:30.229Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:41:06.254Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:41:21.164Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:41:36.695Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:42:38.076Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:42:53.879Z",
+      "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:43:18.117Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:43:37.006Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:43:53.264Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:45:45.180Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:46:25.053Z",
+      "feature": "applications",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:46:42.389Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:46:57.759Z",
+      "feature": "approve",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:47:18.615Z",
+      "feature": "assign",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:47:34.557Z",
+      "feature": "reject",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:47:55.026Z",
+      "feature": "cancel",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:49:05.917Z",
+      "feature": "(panel)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:49:24.981Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:50:11.125Z",
+      "feature": "applications",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:51:00.373Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:51:39.799Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:52:24.701Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:52:44.872Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:53:19.691Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:53:44.661Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:54:05.743Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:54:47.643Z",
+      "feature": "announcements",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:55:08.434Z",
+      "feature": "[id]",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:55:39.563Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:56:04.484Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:56:18.738Z",
+      "feature": "announcements",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:56:49.042Z",
+      "feature": "recruitment",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:57:06.825Z",
+      "feature": "admin",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:57:23.840Z",
+      "feature": "settings",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:58:05.006Z",
+      "feature": "schemas",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-17T23:58:48.037Z",
+      "feature": "admin",
       "phase": "do",
       "action": "updated"
     }
