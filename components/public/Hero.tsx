@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { LinkButton } from '@/components/public/LinkButton'
 
 /**
@@ -24,12 +25,14 @@ export function Hero() {
     >
       {/* 풀폭 사진 */}
       <div className="relative h-[60vh] min-h-[440px] w-full overflow-hidden bg-muted sm:h-[68vh] sm:min-h-[520px]">
-        <img
+        <Image
           src={HERO_IMAGE}
           alt="여월농장의 텃밭 풍경"
-          className="editorial-photo absolute inset-0 h-full w-full object-cover"
-          loading="eager"
-          fetchPriority="high"
+          fill
+          sizes="100vw"
+          priority
+          quality={85}
+          className="editorial-photo object-cover"
         />
 
         {/* 활자 가독성용 최소 dim — 하단 60%만 검정 → 투명 */}

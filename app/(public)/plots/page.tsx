@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { LinkButton } from '@/components/public/LinkButton'
 
@@ -18,7 +19,7 @@ const PRICING = [
 
 /* ─── 시설 ─── */
 const FACILITIES = [
-  { title: '수도 시설', desc: '구획 근처 공동 수도. 호스 무료 비치.' },
+  { title: '수도 시설', desc: '구획 근처에 지하수 수도와 호스 무료 비치.' },
   { title: '농기구 대여', desc: '호미·삽·물뿌리개 등 기본 도구 무료 대여.' },
   { title: '주차장', desc: '농원 입구 무료 주차 20여대.' },
   { title: '간이 화장실', desc: '시즌 중 상시 운영.' },
@@ -56,12 +57,14 @@ export default function PlotsPage() {
       {/* Hero — 풀폭 사진 + 명조 표제 + 정보 띠 */}
       <section className="relative bg-background" aria-labelledby="plots-hero-heading">
         <div className="relative h-[50vh] min-h-[380px] w-full overflow-hidden bg-muted sm:h-[58vh] sm:min-h-[460px]">
-          <img
+          <Image
             src="/gallery/KakaoTalk_20260516_150830179_06.jpg"
             alt="여월농장의 구획 풍경"
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-            fetchPriority="high"
+            fill
+            sizes="100vw"
+            priority
+            quality={85}
+            className="editorial-photo object-cover"
           />
           <div
             aria-hidden

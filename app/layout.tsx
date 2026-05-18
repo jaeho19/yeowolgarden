@@ -1,5 +1,15 @@
 import type { Metadata, Viewport } from 'next'
+import { Gowun_Batang } from 'next/font/google'
 import './globals.css'
+
+// 표제용 한국어 본명조 — next/font가 자동 self-host + preload + font-display swap.
+// 한국어 subset이 next/font/google에 등록되어 있어 한글 글리프 포함된다.
+const gowunBatang = Gowun_Batang({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-gowun-batang',
+  display: 'swap',
+})
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yeowolfarm.netlify.app'
 
@@ -49,25 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ko" className="h-full antialiased">
-      <head>
-        {/* 본문: Pretendard Variable */}
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
-        />
-        {/* 표제: Gowun Batang 본명조 (h1/h2/display — font-heading 클래스로 적용) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
-        />
-      </head>
+    <html lang="ko" className={`h-full antialiased ${gowunBatang.variable}`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   )

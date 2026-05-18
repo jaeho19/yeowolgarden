@@ -87,6 +87,7 @@ export function LookupForm() {
               id="lookup-number"
               type="number"
               inputMode="numeric"
+              enterKeyHint="next"
               placeholder="1234"
               min={1}
               className="flex-1"
@@ -112,6 +113,7 @@ export function LookupForm() {
             type="email"
             inputMode="email"
             autoComplete="email"
+            enterKeyHint="search"
             placeholder="신청 시 입력한 이메일"
             {...register('email')}
           />

@@ -40,15 +40,15 @@ export function PlotsGrid({ plots }: Props) {
         <Legend cls={STATUS_CLS.OCCUPIED} label="점유" />
       </div>
 
-      {/* 그리드 — 컴팩트 정사각형 */}
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(46px,1fr))] gap-1.5 sm:grid-cols-[repeat(auto-fill,minmax(56px,1fr))]">
+      {/* 그리드 — 컴팩트 정사각형. 모바일 셀 ≥ 52px(터치 타겟 44+ 여유 보장) */}
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(52px,1fr))] gap-1.5 sm:grid-cols-[repeat(auto-fill,minmax(56px,1fr))]">
         {plots.map((p) => (
           <button
             key={p.id}
             type="button"
             onClick={() => setSelected(p)}
             className={cn(
-              'aspect-square rounded-md border text-[10px] font-mono leading-tight transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 sm:text-xs',
+              'aspect-square rounded-md border text-[11px] font-mono leading-tight touch-manipulation transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 sm:text-xs',
               STATUS_CLS[p.status]
             )}
             title={

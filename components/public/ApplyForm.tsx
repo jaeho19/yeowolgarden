@@ -111,6 +111,7 @@ export function ApplyForm() {
         <Input
           id="apply-name"
           autoComplete="name"
+          enterKeyHint="next"
           placeholder="홍길동"
           {...register('name')}
         />
@@ -129,6 +130,7 @@ export function ApplyForm() {
           type="tel"
           inputMode="tel"
           autoComplete="tel"
+          enterKeyHint="next"
           placeholder="010-1234-5678"
           {...register('phone')}
         />
@@ -147,6 +149,7 @@ export function ApplyForm() {
           type="email"
           inputMode="email"
           autoComplete="email"
+          enterKeyHint="next"
           placeholder="you@example.com"
           {...register('email')}
         />
@@ -165,6 +168,7 @@ export function ApplyForm() {
             id="apply-count"
             type="number"
             inputMode="numeric"
+            enterKeyHint="next"
             min={1}
             max={MAX_UNITS_PER_APPLICATION}
             className="w-28"

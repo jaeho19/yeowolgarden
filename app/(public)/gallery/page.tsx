@@ -41,7 +41,7 @@ const PHOTOS: readonly GalleryItem[] = [
   {
     src: '/gallery/KakaoTalk_20260516_150830179_06.jpg',
     alt: '시설 안내',
-    caption: '공동 수도와 쉼터',
+    caption: '수도와 쉼터',
   },
   {
     src: '/gallery/KakaoTalk_20260516_150830179_07.jpg',

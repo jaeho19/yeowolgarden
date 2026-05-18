@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* Pretendard Variable self-host (npm pretendard) — jsdelivr CDN 의존 제거.
+   weight 100-900 단일 파일 + font-display: swap 내장. */
+@import "pretendard/dist/web/variable/pretendardvariable.css";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -14,10 +18,12 @@
     "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
     "Noto Sans KR", sans-serif;
-  /* 표제 — Gowun Batang 본명조. H1/H2/Display에만 font-heading 클래스로 적용 */
+  /* 표제 — Gowun Batang 본명조 (next/font/google self-host).
+     --font-gowun-batang는 app/layout.tsx의 next/font에서 주입.
+     H1/H2/Display에만 font-heading 클래스로 적용. */
   --font-heading:
-    "Gowun Batang", "Gowun Dodum", "Pretendard Variable", Pretendard,
-    "Noto Serif KR", "Nanum Myeongjo", serif;
+    var(--font-gowun-batang), "Gowun Batang", "Gowun Dodum",
+    "Pretendard Variable", Pretendard, "Noto Serif KR", "Nanum Myeongjo", serif;
   --font-mono: var(--font-geist-mono);
 
   /* ─── Type scale (fluid clamp, 1.25+ ratio) — 두 번째 부스트 (2026-05-18) ─── */
