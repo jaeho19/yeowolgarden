@@ -82,7 +82,7 @@ export default function AccessPage() {
         </div>
 
         <div className="border-b border-border bg-background">
-          <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-10 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
             <dl className="grid grid-cols-3 gap-x-8 gap-y-1.5 text-sm sm:gap-x-12">
               <dt className="text-muted-foreground">주소</dt>
               <dt className="text-muted-foreground">자가용</dt>
@@ -91,14 +91,6 @@ export default function AccessPage() {
               <dd className="font-medium text-foreground">서울 30분 · 인천 25분</dd>
               <dd className="font-medium text-foreground">부천역 + 75-1번 20분</dd>
             </dl>
-            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-              <LinkButton href={NAVER_DIRECTIONS} target="_blank" rel="noreferrer" size="lg">
-                네이버 길찾기 →
-              </LinkButton>
-              <LinkButton href={KAKAO_MAP_URL} target="_blank" rel="noreferrer" variant="outline" size="lg">
-                카카오맵
-              </LinkButton>
-            </div>
           </div>
         </div>
       </section>
