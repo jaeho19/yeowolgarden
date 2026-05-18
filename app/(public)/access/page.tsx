@@ -17,8 +17,12 @@ const NAVER_PLACE_ID =
   process.env.NEXT_PUBLIC_NAVER_MAP_PLACE_ID ?? '2003003971'
 
 const NAVER_DIRECTIONS = `https://map.naver.com/p/directions/-/-/-/${FARM_LNG},${FARM_LAT},여월농장,${NAVER_PLACE_ID},PLACE_POI/-/transit`
-const KAKAO_MAP_URL = `https://map.kakao.com/?q=여월농장`
-const TMAP_URL = `tmap://search?name=여월농장`
+// 검색 키워드 매칭 시 "여월포도농장"(타 농장)이 상위 노출되어 잘못 연결되는 문제 → 좌표 기반 직접 링크로 변경
+const KAKAO_MAP_URL = `https://map.kakao.com/link/map/여월농장,${FARM_LAT},${FARM_LNG}`
+const TMAP_URL = `tmap://route?goalname=${encodeURIComponent('여월농장')}&goalx=${FARM_LNG}&goaly=${FARM_LAT}`
+// 네이버 지도 iframe은 외부 임베드 차단(모바일 "웹페이지를 사용할 수 없음") → Google Maps embed로 교체
+// API 키 불필요, 좌표 기반 마커 표시
+const GMAPS_EMBED = `https://www.google.com/maps?q=${FARM_LAT},${FARM_LNG}&z=16&output=embed`
 
 const CAR_GUIDE = [
   {
@@ -109,10 +113,10 @@ export default function AccessPage() {
         </h2>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-            {/* Naver 지도 iframe 임베드 */}
+            {/* Google Maps embed — 네이버 지도 iframe은 외부 임베드 차단으로 모바일 미표시 문제 발생 */}
             <iframe
-              title="여월농장 위치 (네이버 지도)"
-              src={`https://map.naver.com/p/entry/place/${NAVER_PLACE_ID}?c=15.00,0,0,0,dh`}
+              title="여월농장 위치"
+              src={GMAPS_EMBED}
               className="h-[400px] w-full sm:h-[500px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
