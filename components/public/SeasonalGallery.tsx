@@ -1,58 +1,73 @@
 import Link from 'next/link'
 
 /**
- * 홈에 표시되는 갤러리 가로 스와이프 미리보기.
- * 실제 사진은 추후 AI 보정본으로 교체 — 현재는 그라데이션 placeholder 5개.
+ * 홈에 표시되는 사계절 갤러리 — 시안 B 「비대칭 매거진 펼침면」
+ *
+ * 데스크톱: 12-grid 좌측 7칸(큰 사진 4:5) + 우측 5칸(작은 4장 2x2)
+ * 모바일: 단일 컬럼 세로 스택 (큰 사진 → 작은 4장 2x2)
+ *
+ * .impeccable.md 「흙냄새 미니멀」 준수:
+ *  - 그라데이션 placeholder 0
+ *  - 카드 wrap·border-left 컬러 스트라이프 0
+ *  - 표제는 font-heading 본명조
+ *  - 운영자 9장 중 5장 사용, 나머지는 /gallery 전체 보기로
  */
-const PLACEHOLDERS = [
-  { id: 1, label: '봄 파종', from: 'from-brand-100', to: 'to-brand-300' },
-  { id: 2, label: '여름 성장', from: 'from-brand-300', to: 'to-brand-500' },
-  { id: 3, label: '가을 수확', from: 'from-amber-200', to: 'to-amber-500' },
-  { id: 4, label: '농원 풍경', from: 'from-emerald-200', to: 'to-emerald-500' },
-  { id: 5, label: '시설 안내', from: 'from-stone-200', to: 'to-stone-400' },
+const BIG_IMAGE = '/gallery/KakaoTalk_20260516_150830179_01.jpg'
+const SMALL_IMAGES = [
+  '/gallery/KakaoTalk_20260516_150830179_02.jpg',
+  '/gallery/KakaoTalk_20260516_150830179_03.jpg',
+  '/gallery/KakaoTalk_20260516_150830179_04.jpg',
+  '/gallery/KakaoTalk_20260516_150830179_05.jpg',
 ] as const
 
 export function SeasonalGallery() {
   return (
-    <section
-      className="py-12 sm:py-16"
-      aria-labelledby="gallery-heading"
-    >
+    <section className="py-12 sm:py-20" aria-labelledby="gallery-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-6">
+        <div className="mb-8 flex items-end justify-between gap-4">
           <h2
             id="gallery-heading"
-            className="text-2xl font-bold sm:text-3xl"
+            className="font-heading text-h2 font-bold leading-tight tracking-tight text-foreground"
           >
             여월농장의 사계절
           </h2>
           <Link
             href="/gallery"
-            className="text-sm font-medium text-brand-700 hover:underline"
+            className="shrink-0 text-sm font-medium text-brand-700 hover:underline"
           >
             전체 보기 →
           </Link>
         </div>
 
-        {/* 가로 스크롤 갤러리 (mobile-friendly) */}
-        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
-          {PLACEHOLDERS.map((p) => (
-            <div
-              key={p.id}
-              className={`relative h-56 w-72 shrink-0 snap-start overflow-hidden rounded-xl bg-gradient-to-br ${p.from} ${p.to} sm:h-64 sm:w-80`}
-            >
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                <span className="text-sm font-medium text-white">
-                  {p.label}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* 비대칭 매거진 펼침면 — 데스크톱 7:5 비율 */}
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-12 sm:items-stretch sm:gap-4">
+          {/* 큰 사진 (좌측 7칸, 4:5 세로형) */}
+          <figure className="relative aspect-[4/5] overflow-hidden rounded-md border border-border bg-muted sm:col-span-7">
+            <img
+              src={BIG_IMAGE}
+              alt="여월농장의 사계절 풍경"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          </figure>
 
-        <p className="mt-4 text-xs text-muted-foreground">
-          ⓘ 실제 사진은 AI 보정 작업 완료 후 교체됩니다.
-        </p>
+          {/* 작은 4장 (우측 5칸, 2x2) — 컨테이너 높이가 큰 사진 높이에 맞춰 stretch */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:col-span-5 sm:gap-4">
+            {SMALL_IMAGES.map((src, i) => (
+              <figure
+                key={src}
+                className="relative aspect-square overflow-hidden rounded-md border border-border bg-muted sm:aspect-auto"
+              >
+                <img
+                  src={src}
+                  alt={`여월농장 풍경 ${i + 2}`}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </figure>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

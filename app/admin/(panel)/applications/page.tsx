@@ -74,10 +74,12 @@ export default async function ApplicationsListPage({ searchParams }: PageProps) 
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <header className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs uppercase tracking-wider text-muted-foreground">
+          <p className="text-xs font-medium text-muted-foreground">
             {data.seasonYear} 시즌
           </p>
-          <h1 className="mt-1 text-2xl font-bold">신청 관리</h1>
+          <h1 className="mt-1 font-heading text-2xl font-bold tracking-tight">
+            신청 관리
+          </h1>
           <p className="mt-1 text-sm text-muted-foreground">
             전체 {data.rows.length}건
           </p>
@@ -120,7 +122,7 @@ export default async function ApplicationsListPage({ searchParams }: PageProps) 
       {/* 테이블 (desktop) */}
       <div className="hidden overflow-x-auto rounded-lg border border-border bg-card md:block">
         <table className="w-full text-sm">
-          <thead className="bg-muted/40 text-xs uppercase tracking-wider text-muted-foreground">
+          <thead className="bg-muted/40 text-xs font-medium text-muted-foreground">
             <tr>
               <th className="px-3 py-2.5 text-left">#</th>
               <th className="px-3 py-2.5 text-left">이름</th>

@@ -11,14 +11,20 @@ export const metadata: Metadata = {
 export default function ApplyStatusPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-50 via-background to-background py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="mb-3 text-sm font-medium tracking-wider uppercase text-brand-700">
-            본인 조회
-          </p>
-          <h1 className="text-3xl font-bold sm:text-4xl">신청 상태 조회</h1>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+      {/* Hero — sub-page 종이톤 패턴 */}
+      <section
+        className="border-b border-border bg-secondary py-12 sm:py-16"
+        aria-labelledby="status-hero-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-medium text-brand-700">본인 조회</p>
+          <h1
+            id="status-hero-heading"
+            className="mt-3 font-heading text-h1 font-bold leading-[1.15] tracking-tight text-foreground"
+          >
+            신청 상태 조회
+          </h1>
+          <p className="mt-5 text-base text-muted-foreground sm:text-lg">
             신청번호와 신청 시 입력한 이메일로 확인하세요.
           </p>
         </div>

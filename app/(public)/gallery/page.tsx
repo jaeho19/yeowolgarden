@@ -58,14 +58,20 @@ const PHOTOS: readonly GalleryItem[] = [
 export default function GalleryPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-50 via-background to-background py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <p className="mb-3 text-sm font-medium tracking-wider uppercase text-brand-700">
-            갤러리
-          </p>
-          <h1 className="text-3xl font-bold sm:text-4xl">여월농장의 사계절</h1>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+      {/* Hero — sub-page 종이톤 패턴 */}
+      <section
+        className="border-b border-border bg-secondary py-12 sm:py-16"
+        aria-labelledby="gallery-hero-heading"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-medium text-brand-700">갤러리</p>
+          <h1
+            id="gallery-hero-heading"
+            className="mt-3 font-heading text-h1 font-bold leading-[1.15] tracking-tight text-foreground"
+          >
+            여월농장의 사계절
+          </h1>
+          <p className="mt-5 text-base text-muted-foreground sm:text-lg">
             농원의 풍경을 사진으로 만나보세요.
           </p>
         </div>
@@ -75,8 +81,8 @@ export default function GalleryPage() {
       <section className="py-10" aria-label="갤러리 그리드">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <GalleryGrid items={PHOTOS} />
-          <p className="mt-6 text-center text-xs text-muted-foreground">
-            ⓘ 사진을 클릭하면 크게 볼 수 있습니다. (← → 화살표 키로 이동)
+          <p className="mt-6 text-xs text-muted-foreground">
+            사진을 클릭하면 크게 볼 수 있습니다. (← → 화살표 키로 이동)
           </p>
         </div>
       </section>

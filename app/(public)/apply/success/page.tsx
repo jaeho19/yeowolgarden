@@ -54,11 +54,9 @@ export default async function ApplySuccessPage(props: {
         </div>
 
         {/* 신청번호 */}
-        <div className="mt-8 rounded-2xl border-2 border-brand-300 bg-card p-6 text-center shadow-sm sm:p-8">
-          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-            신청번호
-          </p>
-          <p className="mt-2 text-5xl font-bold text-brand-700">
+        <div className="mt-8 rounded-md border-2 border-brand-300 bg-card p-6 text-center sm:p-8">
+          <p className="text-xs font-medium text-muted-foreground">신청번호</p>
+          <p className="mt-2 font-heading text-5xl font-bold tabular-nums tracking-tight text-brand-700">
             #{applicationNumber}
           </p>
           <div className="mt-5 flex justify-center">
@@ -70,20 +68,20 @@ export default async function ApplySuccessPage(props: {
             />
           </div>
           <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
-            ⚠️ 이 번호는 본인 조회 시 필요합니다. 반드시 기록해두세요.
+            이 번호는 본인 조회 시 필요합니다. 반드시 기록해두세요.
           </p>
         </div>
 
         {/* 입금 안내 */}
-        <div className="mt-6 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
-          <h2 className="flex items-center gap-2 text-lg font-bold">
-            <span aria-hidden>📞</span> 입금 안내
+        <div className="mt-6 rounded-md border border-border bg-card p-6 sm:p-8">
+          <h2 className="font-heading text-lg font-bold tracking-tight text-foreground">
+            입금 안내
           </h2>
           <dl className="mt-5 space-y-3 text-sm">
             <div className="flex gap-3">
               <dt className="w-20 shrink-0 text-muted-foreground">계좌</dt>
               <dd className="flex flex-1 flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
-                <span className="font-mono break-all">{BANK_INFO}</span>
+                <span className="break-all tabular-nums">{BANK_INFO}</span>
                 <CopyButton text={BANK_INFO} label="복사" />
               </dd>
             </div>
@@ -99,23 +97,23 @@ export default async function ApplySuccessPage(props: {
             </div>
           </dl>
 
-          <div className="mt-5 rounded-lg bg-brand-50/60 p-4 text-sm leading-relaxed text-brand-900">
-            ⓘ 입금 후 1~3일 내 운영자가 확인 → 인접한 구획이 자동 배정됩니다.
-            배정 결과는 아래 <strong>신청 조회</strong>에서 확인하세요.
-          </div>
+          <p className="mt-5 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
+            입금 후 1~3일 내 운영자가 확인 → 인접한 구획이 자동 배정됩니다.
+            배정 결과는 아래 <strong className="text-foreground">신청 조회</strong>에서 확인하세요.
+          </p>
         </div>
 
         {/* 본인 조회 안내 */}
-        <div className="mt-6 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
-          <h2 className="flex items-center gap-2 text-lg font-bold">
-            <span aria-hidden>📌</span> 신청 상태 확인
+        <div className="mt-6 rounded-md border border-border bg-card p-6 sm:p-8">
+          <h2 className="font-heading text-lg font-bold tracking-tight text-foreground">
+            신청 상태 확인
           </h2>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
             신청번호 <strong>#{applicationNumber}</strong>와 신청 시 입력한
             이메일로 언제든 본인 조회가 가능합니다.
           </p>
 
-          <div className="mt-4 flex flex-col gap-2 rounded-lg border border-border bg-muted/30 p-3 text-xs sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-4 flex flex-col gap-2 rounded-md border border-border bg-muted/30 p-3 text-xs sm:flex-row sm:items-center sm:justify-between">
             <code className="break-all font-mono text-xs">{statusUrl}</code>
             <CopyButton text={statusUrl} label="URL 복사" />
           </div>
@@ -128,7 +126,7 @@ export default async function ApplySuccessPage(props: {
               신청 조회로 이동 →
             </LinkButton>
             <LinkButton href="/notice" variant="outline" className="flex-1">
-              📢 공지사항 보기
+              공지사항 보기
             </LinkButton>
           </div>
         </div>

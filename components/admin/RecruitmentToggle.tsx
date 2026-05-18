@@ -42,14 +42,22 @@ export function RecruitmentToggle({ initialOpen }: Props) {
   }
 
   return (
-    <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
+    <div className="rounded-md border border-border bg-card p-5">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h3 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
+          <h3 className="text-sm font-bold text-muted-foreground">
             현재 모집 상태
           </h3>
-          <p className="mt-2 text-2xl font-bold">
-            {open ? '🟢 모집 중' : '🔴 모집 마감'}
+          <p className="mt-2 inline-flex items-center gap-2 font-heading text-2xl font-bold tracking-tight">
+            <span
+              className={
+                open
+                  ? 'h-3 w-3 rounded-full bg-brand-500'
+                  : 'h-3 w-3 rounded-full bg-destructive'
+              }
+              aria-hidden
+            />
+            {open ? '모집 중' : '모집 마감'}
           </p>
           <p className="mt-1 text-xs text-muted-foreground">
             마감 상태에서는 신청 페이지(/apply)가 안내 화면으로 전환됩니다.

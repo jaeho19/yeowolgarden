@@ -159,7 +159,7 @@ export function AnnouncementEditor({ target, onClose }: Props) {
                   setValue('isPinned', !!c, { shouldDirty: true })
                 }
               />
-              📌 핀고정 (상단 노출)
+              핀고정 (상단 노출)
             </label>
             <label className="flex items-center gap-2 text-sm">
               <Checkbox
@@ -168,7 +168,7 @@ export function AnnouncementEditor({ target, onClose }: Props) {
                   setValue('isVisible', !!c, { shouldDirty: true })
                 }
               />
-              👁️ 공개 (off하면 임시 비공개)
+              공개 (off하면 임시 비공개)
             </label>
           </div>
 

@@ -95,7 +95,7 @@ export function ApplicationActions({
             }
             disabled={isPending}
           >
-            ✅ 자동 배정 (승인)
+            자동 배정 (승인)
           </Button>
         )}
 
@@ -173,7 +173,7 @@ function ManualAssignDialog({
         className="inline-flex h-9 items-center justify-center rounded-md border border-border bg-background px-4 text-sm font-medium hover:bg-accent disabled:pointer-events-none disabled:opacity-50"
         disabled={disabled}
       >
-        🛠 수동 배정
+        수동 배정
       </DialogTrigger>
       <DialogContent className="max-w-md">
         <DialogTitle>수동 배정</DialogTitle>
@@ -236,7 +236,7 @@ function RejectDialog({
         className="inline-flex h-9 items-center justify-center rounded-md border border-destructive/40 bg-background px-4 text-sm font-medium text-destructive hover:bg-destructive/5 disabled:pointer-events-none disabled:opacity-50"
         disabled={disabled}
       >
-        ❌ 거절
+        거절
       </DialogTrigger>
       <DialogContent className="max-w-md">
         <DialogTitle>신청 거절</DialogTitle>
@@ -316,7 +316,7 @@ function CancelDialog({
         className="inline-flex h-9 items-center justify-center rounded-md border border-border bg-background px-4 text-sm font-medium text-muted-foreground hover:bg-accent disabled:pointer-events-none disabled:opacity-50"
         disabled={disabled}
       >
-        🚫 취소 처리
+        취소 처리
       </DialogTrigger>
       <DialogContent className="max-w-md">
         <DialogTitle>신청 취소</DialogTitle>

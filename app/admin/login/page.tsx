@@ -15,19 +15,16 @@ export default function AdminLoginPage() {
         <div className="mb-8 text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-lg font-semibold"
+            className="font-heading text-lg font-bold tracking-tight text-foreground"
           >
-            <span className="text-2xl" role="img" aria-hidden>
-              🌱
-            </span>
             여월농장
           </Link>
-          <p className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">
-            Admin Console
+          <p className="mt-1 text-xs font-medium text-muted-foreground">
+            어드민 콘솔
           </p>
         </div>
 
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
+        <div className="rounded-md border border-border bg-card p-6 sm:p-8">
           <h1 className="text-xl font-bold">관리자 로그인</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             운영자 전용 페이지입니다.
