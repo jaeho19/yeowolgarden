@@ -158,7 +158,7 @@ export function ApplyForm() {
         required
         error={errors.desiredCount?.message}
         htmlFor="apply-count"
-        help="구획당 5평 · 100,000원 / 인접한 구획으로 자동 배정"
+        help={`구획당 5평 · 100,000원 / 1~${MAX_UNITS_PER_APPLICATION}구좌까지 신청 가능 (5구좌 이상은 "기타"를 누른 뒤 직접 입력)`}
       >
         <div className="flex items-center gap-3">
           <Input
@@ -178,6 +178,12 @@ export function ApplyForm() {
             setValue('desiredCount', n, { shouldValidate: true })
           }
         />
+        {desiredCount >= 5 && (
+          <p className="mt-2 text-xs text-muted-foreground">
+            ⓘ 5구좌 이상은 인접 묶음 상황에 따라 운영자와 협의 후 배정될 수
+            있습니다.
+          </p>
+        )}
       </FormField>
 
       {/* 가격 미리보기 */}
@@ -352,6 +358,19 @@ function UnitsQuickButtons({
   onChange: (n: number) => void
 }) {
   const presets = [1, 2, 3, 4]
+  const isOther = Number.isFinite(value) && value >= 5
+
+  const handleOtherClick = () => {
+    // 현재 value가 5 미만이면 5로 시작 — 사용자가 곧 input에서 자유롭게 수정
+    if (!isOther) onChange(5)
+    // 숫자 input에 포커스 + 선택 (덮어쓰기 쉽도록)
+    const el = document.getElementById('apply-count') as HTMLInputElement | null
+    if (el) {
+      el.focus()
+      el.select()
+    }
+  }
+
   return (
     <div className="mt-2 flex flex-wrap gap-1.5">
       {presets.map((n) => (
@@ -369,6 +388,19 @@ function UnitsQuickButtons({
           {n}구좌 ({n * 5}평)
         </button>
       ))}
+      <button
+        type="button"
+        onClick={handleOtherClick}
+        className={cn(
+          'rounded-md border px-3 py-1 text-xs transition',
+          isOther
+            ? 'border-brand-500 bg-brand-500 text-white'
+            : 'border-dashed border-border bg-card text-muted-foreground hover:bg-accent'
+        )}
+        aria-label="5구좌 이상 직접 입력"
+      >
+        {isOther ? `기타 (${value}구좌)` : '기타 (5구좌+)'}
+      </button>
     </div>
   )
 }

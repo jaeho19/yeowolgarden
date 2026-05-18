@@ -1,11 +1,10 @@
 import { Hero } from '@/components/public/Hero'
-import { ValueCards } from '@/components/public/ValueCards'
-import { AvailabilityBadge } from '@/components/public/AvailabilityBadge'
+import { RecruitmentNotice } from '@/components/public/RecruitmentNotice'
 import { AnnouncementBanner } from '@/components/public/AnnouncementBanner'
 import { SeasonalGallery } from '@/components/public/SeasonalGallery'
 
-// 잔여 통계·공지가 DB의 실시간 상태에 의존하므로 dynamic.
-// (build-time prerender 차단 — Netlify 환경에서 DB 접근 불가 시에도 빌드 통과)
+// AnnouncementBanner가 DB read이므로 dynamic.
+// RecruitmentNotice는 정적이지만 일관성 위해 같이 dynamic 유지.
 export const dynamic = 'force-dynamic'
 
 export default function HomePage() {
@@ -13,8 +12,7 @@ export default function HomePage() {
     <>
       <AnnouncementBanner />
       <Hero />
-      <ValueCards />
-      <AvailabilityBadge />
+      <RecruitmentNotice />
       <SeasonalGallery />
     </>
   )

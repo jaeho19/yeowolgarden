@@ -4,16 +4,16 @@ import { LinkButton } from '@/components/public/LinkButton'
 import { Card, CardContent } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: '농원 소개 — 조경학 박사가 직접 운영하는 학습형 텃밭',
+  title: '농원 소개 — 교통이 편리한 여월 체험농원',
   description:
-    '여월농장은 조경학 박사가 직접 운영하는 학습형 주말 텃밭입니다. 부천 여월동에서 자연·작물·이웃을 만나세요.',
+    '서울에서 30분, 부천 여월동의 체험농원. 자연·작물·이웃을 가까이서 만나는 주말 텃밭.',
 }
 
 const PHILOSOPHY = [
   {
-    icon: '🎓',
-    title: '학습형 농원',
-    desc: '단순 임대가 아닌, 작물 재배·토양 관리를 배울 수 있는 농원. 운영자(조경학 박사)의 작물 자문이 항상 가능합니다.',
+    icon: '🚇',
+    title: '교통이 편리한 위치',
+    desc: '서울 강서·양천에서 차로 약 30분. 부천역에서 버스로도 가까워 가족 단위 주말 방문이 부담 없습니다.',
   },
   {
     icon: '🌱',
@@ -37,12 +37,12 @@ export default function AboutPage() {
             농원 소개
           </p>
           <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            자연을 가르치는 텃밭
+            서울에서 30분, 여월 체험농원
           </h1>
           <p className="mt-5 max-w-2xl mx-auto text-base text-muted-foreground sm:text-lg leading-relaxed">
-            여월농장은 조경학 박사가 직접 운영하는 학습형 주말 텃밭입니다.
+            교통이 편리한 부천 여월동에서 자연·작물·이웃을 가까이서 만나보세요.
             <br className="hidden sm:inline" />
-            서울에서 차로 30분, 부천 여월동에서 시작하세요.
+            가족 단위 주말 텃밭으로 잘 어울립니다.
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function AboutPage() {
 
             <div>
               <h2 id="owner-heading" className="text-2xl font-bold sm:text-3xl">
-                운영자 소개
+                여월농장 소개
               </h2>
               <p className="mt-3 text-sm font-medium text-brand-700">
                 농업회사법인 (유)호정
@@ -72,23 +72,22 @@ export default function AboutPage() {
 
               <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/90">
                 <p>
-                  안녕하세요, 여월농장 운영자입니다.
+                  안녕하세요, 여월농장입니다.
                 </p>
                 <p>
-                  저는 <strong>조경학 박사</strong>로, 30년 가까이 식물과 토양을
-                  공부해왔습니다. 농원을 단순히 임대하는 곳이 아니라,
-                  도시인이 자연과 작물을 가까이서 배울 수 있는 공간으로 만들고
-                  싶었습니다.
+                  여월농장은 서울 강서·양천에서 차로 약 30분이면 닿는,
+                  <strong> 교통이 편리한 부천 여월동</strong>의 체험농원입니다.
+                  도시인이 자연과 작물을 가까이에서 즐길 수 있는 공간을
+                  지향합니다.
                 </p>
                 <p>
-                  여월농장은 2027 시즌 기준 <strong>300구획</strong> 규모이며,
-                  모든 구획을 균일하게 <strong>5평</strong>으로 설계했습니다.
-                  여러 구좌를 신청하시면 인접한 구획으로 자동 배정되어,
-                  가족·동호회 단위로 편안하게 이용하실 수 있습니다.
+                  300구획 규모이며, 모든 구획을 균일하게 <strong>5평</strong>으로
+                  설계했습니다. 여러 구좌를 신청하시면 인접한 구획으로 자동
+                  배정되어, 가족·동호회 단위로 편안하게 이용하실 수 있습니다.
                 </p>
                 <p>
-                  작물 선택, 파종 시기, 병해충 관리 등 무엇이든 편하게
-                  문의해주세요. 주말마다 농원에 머물며 직접 안내해 드립니다.
+                  작물 선택, 파종 시기, 병해충 관리 등 궁금한 점은 언제든
+                  편하게 문의해주세요. 주말에 농원에서 직접 안내해 드립니다.
                 </p>
               </div>
             </div>

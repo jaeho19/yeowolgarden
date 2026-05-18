@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-05-18T01:20:38.504Z",
+  "lastUpdated": "2026-05-18T01:57:08.237Z",
   "activeFeatures": [
     "yeowol-farm-website",
     "db",
@@ -125,9 +125,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-16T10:33:33.520Z",
-        "lastUpdated": "2026-05-17T23:45:45.180Z"
+        "lastUpdated": "2026-05-18T01:51:34.556Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\lib\\allocation.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\layout.tsx"
     },
     "schemas": {
       "phase": "do",
@@ -164,9 +164,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T13:37:26.967Z",
-        "lastUpdated": "2026-05-17T23:32:48.046Z"
+        "lastUpdated": "2026-05-18T01:57:08.237Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\LookupForm.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\ApplyForm.tsx"
     },
     "(public)": {
       "phase": "do",
@@ -177,7 +177,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T13:37:49.489Z",
-        "lastUpdated": "2026-05-18T01:19:34.916Z"
+        "lastUpdated": "2026-05-18T01:55:11.273Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\page.tsx"
     },
@@ -190,7 +190,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:05:54.404Z",
-        "lastUpdated": "2026-05-18T01:19:45.941Z"
+        "lastUpdated": "2026-05-18T01:53:03.266Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\plots\\page.tsx"
     },
@@ -216,7 +216,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:08:26.209Z",
-        "lastUpdated": "2026-05-17T23:08:26.209Z"
+        "lastUpdated": "2026-05-18T01:52:50.369Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\about\\page.tsx"
     },
@@ -242,7 +242,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-05-17T23:11:26.762Z",
-        "lastUpdated": "2026-05-17T23:11:26.762Z"
+        "lastUpdated": "2026-05-18T01:53:15.423Z"
       },
       "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\faq\\page.tsx"
     },
@@ -510,7 +510,7 @@
   "session": {
     "startedAt": "2026-05-16T05:54:00.974Z",
     "onboardingCompleted": true,
-    "lastActivity": "2026-05-18T01:20:38.504Z"
+    "lastActivity": "2026-05-18T01:57:08.237Z"
   },
   "history": [
     {
@@ -1151,6 +1151,72 @@
     {
       "timestamp": "2026-05-18T01:20:38.504Z",
       "feature": "availability",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:51:34.556Z",
+      "feature": "yeowol garden",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:52:06.239Z",
+      "feature": "about",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:52:25.368Z",
+      "feature": "about",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:52:50.369Z",
+      "feature": "about",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:53:03.266Z",
+      "feature": "plots",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:53:15.423Z",
+      "feature": "faq",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:53:46.190Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:54:57.656Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:55:11.273Z",
+      "feature": "(public)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:56:48.789Z",
+      "feature": "public",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-05-18T01:57:08.237Z",
+      "feature": "public",
       "phase": "do",
       "action": "updated"
     }
