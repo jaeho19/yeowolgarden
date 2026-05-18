@@ -138,7 +138,7 @@ export function AnnouncementEditor({ target, onClose }: Props) {
               id="ann-content"
               className="mt-1.5 font-mono text-sm"
               rows={10}
-              placeholder="안녕하세요, 여월농장입니다.&#10;&#10;**중요**: 2027 시즌 분양은 1월 1일부터..."
+              placeholder="안녕하세요, 여월농장입니다.&#10;&#10;**중요**: 2027 시즌 분양은 2월부터..."
               {...register('content')}
             />
             <p className="mt-1.5 text-xs text-muted-foreground">
