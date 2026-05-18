@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AvailabilityBadge } from '@/components/public/AvailabilityBadge'
 import { LinkButton } from '@/components/public/LinkButton'
 import { Card, CardContent } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -8,11 +7,8 @@ import { Separator } from '@/components/ui/separator'
 export const metadata: Metadata = {
   title: '분양 안내 — 5평 100,000원 / 시즌 1회 결제',
   description:
-    '여월농장 2027 시즌 주말 텃밭 분양. 모든 구획 균일 5평, 구획당 100,000원. 인접 묶음 자동 배정.',
+    '여월농장 주말 텃밭 분양. 모든 구획 균일 5평, 구획당 100,000원. 인접 묶음 자동 배정.',
 }
-
-// 잔여 통계가 DB에 의존 — dynamic으로 build-time prerender 차단.
-export const dynamic = 'force-dynamic'
 
 /* ─── 가격표 데이터 (구좌 단위) ─── */
 const PRICING = [
@@ -81,9 +77,6 @@ export default function PlotsPage() {
           </p>
         </div>
       </section>
-
-      {/* 잔여 현황 */}
-      <AvailabilityBadge />
 
       {/* 가격표 */}
       <section className="py-16 sm:py-20" aria-labelledby="pricing-heading">

@@ -1,10 +1,11 @@
 import { LinkButton } from '@/components/public/LinkButton'
 
 /**
- * 홈에 표시되는 분양 일정 안내 카드.
+ * 홈·분양 안내 페이지에 표시되는 분양 일정 안내 카드.
  * 현재 시즌(2026) 마감 + 다음 시즌(2027) 모집 시작 시기 + 가격·규모 안내.
  *
- * AvailabilityBadge(잔여 통계 표시용)와 분리 — 어드민/plots 페이지 등은 그대로 유지.
+ * 잔여 통계는 운영자 요청으로 사용자 페이지에서 제외 (운영자 어드민에서만 확인).
+ * 잔여 계산 로직은 lib/availability.ts에 남아 API에서 활용 가능.
  */
 export function RecruitmentNotice() {
   return (
