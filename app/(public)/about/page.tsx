@@ -54,13 +54,16 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start md:gap-12">
             <figure className="relative aspect-[4/5] overflow-hidden rounded-md border border-border bg-muted">
               <Image
-                src="/gallery/KakaoTalk_20260516_150830179.jpg"
-                alt="여월농장 풍경"
+                src="/gallery/illust-family-tending.png"
+                alt="가족이 텃밭에서 작물을 가꾸는 모습"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+                className="editorial-photo object-cover"
                 priority
               />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent px-4 pb-3 pt-10 text-xs text-white/85">
+                체험은 이런 모습입니다 · 예시 일러스트
+              </figcaption>
             </figure>
 
             <div>

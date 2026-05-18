@@ -8,10 +8,11 @@ import { LinkButton } from '@/components/public/LinkButton'
  *  - 활자가 사진 위에 직접 = 잡지 표지
  *  - 사진 아래 dl 정보 띠 + CTA = 안내판/마스트헤드
  *
- * .impeccable.md 「흙냄새 미니멀」 준수:
- *  - 그라데이션 배경 0 (사진 위 dim은 활자 가독성용 최소)
- *  - text-center 0, uppercase 0, 이모지 0, 카드 0
- *  - 표제 Gowun Batang (font-heading) + text-display
+ * .impeccable.md 「일상 속 농장」 준수:
+ *  - 3대 메시지를 H1 + 서브 카피에 분산 (멀지않음·차없어도·반나절)
+ *  - 표제 자간 -0.01em + 행간 1.2 — 명조 무게에 공기 한 단 더
+ *  - text-center 0, 영문 라벨 0, 이모지 0, 카드 0
+ *  - 사진 위 dim은 가독성용 최소 — 그라데이션 배경 패턴 아님
  */
 const HERO_IMAGE = '/gallery/KakaoTalk_20260516_150830179.jpg'
 
@@ -26,7 +27,7 @@ export function Hero() {
         <img
           src={HERO_IMAGE}
           alt="여월농장의 텃밭 풍경"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="editorial-photo absolute inset-0 h-full w-full object-cover"
           loading="eager"
           fetchPriority="high"
         />
@@ -39,18 +40,21 @@ export function Hero() {
 
         {/* 사진 위 좌하단 활자 (잡지 표지 정렬) */}
         <div className="absolute inset-x-0 bottom-0">
-          <div className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
-            <p className="text-sm font-medium text-white/90">
-              여월 체험농원
+          <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
+            <p className="text-sm font-medium text-white/85">
+              여월농장 · 2027 시즌
             </p>
             <h1
               id="hero-heading"
-              className="mt-3 max-w-3xl font-heading text-display font-bold leading-[1.08] tracking-tight text-white"
+              className="mt-3 max-w-3xl font-heading text-display font-bold leading-[1.2] tracking-[-0.01em] text-white"
             >
-              서울에서 30분,
+              멀리 가지 않아도
               <br />
-              부천 여월동의 주말 텃밭
+              자연을 느낀다
             </h1>
+            <p className="mt-5 max-w-xl text-base text-white/85 sm:text-lg">
+              차가 없어도 올 수 있고, 반나절만 내도 힐링이 되는 곳.
+            </p>
           </div>
         </div>
       </div>
