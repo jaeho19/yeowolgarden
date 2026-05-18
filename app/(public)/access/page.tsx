@@ -20,9 +20,6 @@ const NAVER_DIRECTIONS = `https://map.naver.com/p/directions/-/-/-/${FARM_LNG},$
 // 검색 키워드 매칭 시 "여월포도농장"(타 농장)이 상위 노출되어 잘못 연결되는 문제 → 좌표 기반 직접 링크로 변경
 const KAKAO_MAP_URL = `https://map.kakao.com/link/map/여월농장,${FARM_LAT},${FARM_LNG}`
 const TMAP_URL = `tmap://route?goalname=${encodeURIComponent('여월농장')}&goalx=${FARM_LNG}&goaly=${FARM_LAT}`
-// 네이버 지도 iframe은 외부 임베드 차단(모바일 "웹페이지를 사용할 수 없음") → Google Maps embed로 교체
-// API 키 불필요, 좌표 기반 마커 표시
-const GMAPS_EMBED = `https://www.google.com/maps?q=${FARM_LAT},${FARM_LNG}&z=16&output=embed`
 
 const CAR_GUIDE = [
   {
@@ -106,29 +103,58 @@ export default function AccessPage() {
         </div>
       </section>
 
-      {/* 지도 + 길찾기 CTA */}
+      {/* 길찾기 버튼 3종 + 도보 약도 */}
       <section className="py-10" aria-labelledby="map-heading">
-        <h2 id="map-heading" className="sr-only">
-          지도
-        </h2>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-            {/* Google Maps embed — 네이버 지도 iframe은 외부 임베드 차단으로 모바일 미표시 문제 발생 */}
-            <iframe
-              title="여월농장 위치"
-              src={GMAPS_EMBED}
-              className="h-[400px] w-full sm:h-[500px]"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 id="map-heading" className="sr-only">
+            길찾기와 도보 약도
+          </h2>
 
-          {/* Hero 정보 띠에 네이버·카카오 길찾기가 있으므로 여기는 T-map(모바일 전용)만 노출 */}
-          <div className="mt-5 flex flex-wrap justify-center gap-3">
-            <LinkButton href={TMAP_URL} variant="outline">
-              T-map으로 길찾기 (모바일)
+          {/* 길찾기 3종 — 모바일 세로 스택, 데스크탑 3열 균등 */}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <LinkButton
+              href={NAVER_DIRECTIONS}
+              target="_blank"
+              rel="noreferrer"
+              size="lg"
+              variant="outline"
+            >
+              네이버 지도
+            </LinkButton>
+            <LinkButton
+              href={KAKAO_MAP_URL}
+              target="_blank"
+              rel="noreferrer"
+              size="lg"
+              variant="outline"
+            >
+              카카오맵
+            </LinkButton>
+            <LinkButton
+              href={TMAP_URL}
+              target="_blank"
+              rel="noreferrer"
+              size="lg"
+              variant="outline"
+            >
+              T-map (모바일)
             </LinkButton>
           </div>
+
+          {/* 도보 약도 — 부천종합운동장역 7호선 5번 출구 → 여월농장 약 900m */}
+          <figure className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+            <Image
+              src="/access-walking-map.png"
+              alt="부천종합운동장역 7호선 5번 출구에서 여월농장까지 도보 약 900m 약도"
+              width={1110}
+              height={1021}
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="h-auto w-full"
+            />
+            <figcaption className="border-t border-border bg-secondary px-4 py-3 text-sm text-muted-foreground">
+              부천종합운동장역 7호선 5번 출구에서 약 900m · 도보 약 12분
+            </figcaption>
+          </figure>
         </div>
       </section>
 
