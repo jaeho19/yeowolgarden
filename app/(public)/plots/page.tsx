@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     '여월농장 2027 시즌 주말 텃밭 분양. 모든 구획 균일 5평, 구획당 100,000원. 인접 묶음 자동 배정.',
 }
 
-// 60초마다 잔여 통계 갱신 (ISR — AvailabilityBadge)
-export const revalidate = 60
+// 잔여 통계가 DB에 의존 — dynamic으로 build-time prerender 차단.
+export const dynamic = 'force-dynamic'
 
 /* ─── 가격표 데이터 (구좌 단위) ─── */
 const PRICING = [

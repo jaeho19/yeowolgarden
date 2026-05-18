@@ -13,7 +13,8 @@ import { desc, eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { announcements } from '@/db/schema'
 
-export const revalidate = 60
+// DB read API — build-time prerender 차단.
+export const dynamic = 'force-dynamic'
 
 export async function GET() {
   const list = await db

@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     '여월농장 공지사항 — 분양 일정·시설 안내·시즌 운영 정보를 확인하세요.',
 }
 
-// 60초마다 갱신 (ISR)
-export const revalidate = 60
+// DB read 페이지 — build-time prerender 차단.
+export const dynamic = 'force-dynamic'
 
 async function getAnnouncements() {
   return await db

@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     '여월농장 주말 텃밭 분양 신청. 5평 100,000원 · 인접 구획 자동 배정.',
 }
 
-// 모집 ON/OFF가 빠르게 바뀔 수 있으므로 짧은 캐시
-export const revalidate = 30
+// 모집 ON/OFF가 실시간 DB 상태 — dynamic으로 build-time prerender 차단.
+export const dynamic = 'force-dynamic'
 
 export default async function ApplyPage() {
   const [seasonYear, open] = await Promise.all([
