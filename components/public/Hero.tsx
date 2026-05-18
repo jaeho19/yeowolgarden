@@ -17,7 +17,7 @@ export function Hero() {
 
       <div className="mx-auto flex min-h-[80vh] max-w-7xl flex-col items-center justify-center px-4 py-24 text-center text-white sm:px-6 lg:px-8">
         <p className="mb-3 text-sm font-medium tracking-wider uppercase opacity-90">
-          2027 시즌 분양 안내
+          여월 체험농원
         </p>
         <h1
           id="hero-heading"
@@ -25,10 +25,10 @@ export function Hero() {
         >
           서울에서 30분,
           <br />
-          부천 여월농장
+          교통이 편리한 여월 체험농원
         </h1>
         <p className="mt-6 max-w-xl text-lg text-white/90 sm:text-xl">
-          조경학 박사가 직접 운영하는 학습형 주말 텃밭
+          가족이 함께하는 부천 여월동의 주말 텃밭
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
