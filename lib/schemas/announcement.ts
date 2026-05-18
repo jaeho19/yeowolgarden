@@ -14,8 +14,8 @@ export const AnnouncementInputSchema = z.object({
     .trim()
     .min(1, '내용을 입력해주세요')
     .max(5000, '내용은 5000자 이내로 입력해주세요'),
-  isPinned: z.boolean().default(false),
-  isVisible: z.boolean().default(true),
+  isPinned: z.boolean(),
+  isVisible: z.boolean(),
 })
 
 export type AnnouncementInput = z.infer<typeof AnnouncementInputSchema>
