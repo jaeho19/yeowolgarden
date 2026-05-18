@@ -201,7 +201,7 @@ export default function AccessPage() {
             <AlertDescription>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
                 <li>주말·공휴일 오전 10시 ~ 오후 5시 운영 (시즌 중 상시 출입 가능)</li>
-                <li>편한 옷·장갑·모자 착용 권장. 농기구는 무료 대여.</li>
+                <li>편한 옷·장갑·모자 착용 권장. 농기구(호미·삽·물뿌리개 등)는 본인이 지참해주세요.</li>
                 <li>반려동물 동반은 가능하나, 다른 분에게 피해 없도록 리드줄 필수.</li>
                 <li>흡연·취사는 지정 장소에서만. 화재 위험 주의.</li>
               </ul>

@@ -24,12 +24,12 @@ export function RecruitmentNotice() {
               id="recruitment-notice-heading"
               className="mt-3 font-heading text-h1 font-bold leading-[1.18] tracking-tight text-foreground"
             >
-              2027년 1월,
+              2027년 2월,
               <br />
               분양 모집을 시작합니다.
             </h2>
             <p className="mt-6 max-w-[48ch] text-base leading-relaxed text-muted-foreground">
-              2026년도 분양은 마감되었습니다. 다음 시즌은 2027년 1월에 신청을
+              2026년도 분양은 마감되었습니다. 다음 시즌은 2027년 2월에 신청을
               받으며, 매년 같은 시기에 동일한 방식으로 진행합니다.
             </p>
           </div>
@@ -44,7 +44,7 @@ export function RecruitmentNotice() {
               <div className="flex items-baseline gap-4 border-t border-border py-3">
                 <dt className="w-24 shrink-0 text-muted-foreground">2027</dt>
                 <dd className="font-medium text-foreground">
-                  2027년 1월 모집 시작
+                  2027년 2월 모집 시작
                 </dd>
               </div>
               <div className="flex items-baseline gap-4 border-y border-border py-3">
