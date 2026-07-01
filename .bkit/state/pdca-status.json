@@ -1,6 +1,6 @@
 {
-  "version": "2.0",
-  "lastUpdated": "2026-05-18T13:01:07.057Z",
+  "version": "3.0",
+  "lastUpdated": "2026-07-01T03:09:40.693Z",
   "activeFeatures": [
     "yeowol-farm-website",
     "db",
@@ -103,7 +103,24 @@
         "photoCount": 9
       },
       "matchRate": null,
-      "iterationCount": 0
+      "iterationCount": 0,
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "db": {
       "phase": "do",
@@ -116,7 +133,24 @@
         "started": "2026-05-16T10:33:23.030Z",
         "lastUpdated": "2026-05-16T10:33:23.030Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\db\\schema.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\db\\schema.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "yeowol garden": {
       "phase": "do",
@@ -129,7 +163,24 @@
         "started": "2026-05-16T10:33:33.520Z",
         "lastUpdated": "2026-05-18T10:38:17.471Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\layout.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\layout.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "schemas": {
       "phase": "do",
@@ -142,7 +193,24 @@
         "started": "2026-05-16T10:33:54.111Z",
         "lastUpdated": "2026-05-17T23:58:05.006Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\lib\\schemas\\announcement.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\lib\\schemas\\announcement.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "scripts": {
       "phase": "do",
@@ -155,7 +223,24 @@
         "started": "2026-05-16T10:39:29.173Z",
         "lastUpdated": "2026-05-18T10:27:04.556Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\scripts\\convert-images.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\scripts\\convert-images.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "public": {
       "phase": "do",
@@ -168,7 +253,24 @@
         "started": "2026-05-17T13:37:26.967Z",
         "lastUpdated": "2026-05-18T12:56:34.718Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\RecruitmentNotice.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\components\\public\\RecruitmentNotice.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "(public)": {
       "phase": "do",
@@ -181,7 +283,24 @@
         "started": "2026-05-17T13:37:49.489Z",
         "lastUpdated": "2026-05-18T01:55:11.273Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "plots": {
       "phase": "do",
@@ -194,7 +313,24 @@
         "started": "2026-05-17T23:05:54.404Z",
         "lastUpdated": "2026-05-18T12:55:22.378Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\plots\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\plots\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "access": {
       "phase": "do",
@@ -207,7 +343,24 @@
         "started": "2026-05-17T23:06:54.328Z",
         "lastUpdated": "2026-05-18T12:52:44.049Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\access\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\access\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "about": {
       "phase": "do",
@@ -220,7 +373,24 @@
         "started": "2026-05-17T23:08:26.209Z",
         "lastUpdated": "2026-05-18T10:29:08.345Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\about\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\about\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "gallery": {
       "phase": "do",
@@ -233,7 +403,24 @@
         "started": "2026-05-17T23:09:19.727Z",
         "lastUpdated": "2026-05-18T10:06:50.766Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\gallery\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\gallery\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "faq": {
       "phase": "do",
@@ -246,7 +433,24 @@
         "started": "2026-05-17T23:11:26.762Z",
         "lastUpdated": "2026-05-18T12:57:28.972Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\faq\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\faq\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "announcements": {
       "phase": "do",
@@ -259,7 +463,24 @@
         "started": "2026-05-17T23:12:31.711Z",
         "lastUpdated": "2026-05-18T01:20:21.564Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\announcements\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\announcements\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "notice": {
       "phase": "do",
@@ -272,7 +493,24 @@
         "started": "2026-05-17T23:12:59.382Z",
         "lastUpdated": "2026-05-18T03:47:42.658Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\notice\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\notice\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "applications": {
       "phase": "do",
@@ -285,7 +523,24 @@
         "started": "2026-05-17T23:26:08.824Z",
         "lastUpdated": "2026-05-18T10:49:00.446Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\applications\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\applications\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "lookup": {
       "phase": "do",
@@ -298,7 +553,24 @@
         "started": "2026-05-17T23:26:46.755Z",
         "lastUpdated": "2026-05-17T23:26:46.755Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\applications\\lookup\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\applications\\lookup\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "availability": {
       "phase": "do",
@@ -311,7 +583,24 @@
         "started": "2026-05-17T23:27:11.948Z",
         "lastUpdated": "2026-05-18T01:20:38.504Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\plots\\availability\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\plots\\availability\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "apply": {
       "phase": "do",
@@ -324,7 +613,24 @@
         "started": "2026-05-17T23:30:14.543Z",
         "lastUpdated": "2026-05-18T03:44:59.446Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "success": {
       "phase": "do",
@@ -337,7 +643,24 @@
         "started": "2026-05-17T23:31:21.949Z",
         "lastUpdated": "2026-05-18T03:46:02.956Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\success\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\success\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "status": {
       "phase": "do",
@@ -350,7 +673,24 @@
         "started": "2026-05-17T23:33:04.066Z",
         "lastUpdated": "2026-05-18T03:46:51.773Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\status\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\apply\\status\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "admin": {
       "phase": "do",
@@ -363,7 +703,24 @@
         "started": "2026-05-17T23:42:38.076Z",
         "lastUpdated": "2026-05-18T13:01:07.057Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\components\\admin\\AnnouncementEditor.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\components\\admin\\AnnouncementEditor.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "login": {
       "phase": "do",
@@ -376,7 +733,24 @@
         "started": "2026-05-17T23:42:53.879Z",
         "lastUpdated": "2026-05-18T04:03:00.091Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\login\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\login\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "[id]": {
       "phase": "do",
@@ -389,7 +763,24 @@
         "started": "2026-05-17T23:46:42.389Z",
         "lastUpdated": "2026-05-18T04:05:58.929Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\applications\\[id]\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\applications\\[id]\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "approve": {
       "phase": "do",
@@ -402,7 +793,24 @@
         "started": "2026-05-17T23:46:57.759Z",
         "lastUpdated": "2026-05-17T23:46:57.759Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\approve\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\approve\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "assign": {
       "phase": "do",
@@ -415,7 +823,24 @@
         "started": "2026-05-17T23:47:18.615Z",
         "lastUpdated": "2026-05-17T23:47:18.615Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\assign\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\assign\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "reject": {
       "phase": "do",
@@ -428,7 +853,24 @@
         "started": "2026-05-17T23:47:34.557Z",
         "lastUpdated": "2026-05-17T23:47:34.557Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\reject\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\reject\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "cancel": {
       "phase": "do",
@@ -441,7 +883,24 @@
         "started": "2026-05-17T23:47:55.026Z",
         "lastUpdated": "2026-05-17T23:47:55.026Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\cancel\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\applications\\[id]\\cancel\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "(panel)": {
       "phase": "do",
@@ -454,7 +913,24 @@
         "started": "2026-05-17T23:49:05.917Z",
         "lastUpdated": "2026-05-18T04:04:10.794Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "recruitment": {
       "phase": "do",
@@ -467,7 +943,24 @@
         "started": "2026-05-17T23:56:49.042Z",
         "lastUpdated": "2026-05-17T23:56:49.042Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\settings\\recruitment\\route.ts"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\api\\admin\\settings\\recruitment\\route.ts",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "settings": {
       "phase": "do",
@@ -480,7 +973,24 @@
         "started": "2026-05-17T23:57:23.840Z",
         "lastUpdated": "2026-05-18T04:06:24.344Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\settings\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\admin\\(panel)\\settings\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "privacy": {
       "phase": "do",
@@ -493,7 +1003,24 @@
         "started": "2026-05-18T04:53:42.242Z",
         "lastUpdated": "2026-05-18T04:53:42.242Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\privacy\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\privacy\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     },
     "terms": {
       "phase": "do",
@@ -506,7 +1033,24 @@
         "started": "2026-05-18T04:54:24.097Z",
         "lastUpdated": "2026-05-18T04:54:24.097Z"
       },
-      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\terms\\page.tsx"
+      "lastFile": "C:\\dev\\yeowol garden\\app\\(public)\\terms\\page.tsx",
+      "stateMachine": {
+        "currentState": "do",
+        "previousState": null,
+        "stateHistory": [],
+        "retryCount": 0,
+        "maxRetries": 5,
+        "circuitBreakerOpen": false
+      },
+      "metrics": {
+        "qualityScore": null,
+        "conventionCompliance": null,
+        "apiCompliance": null,
+        "cycleTimeMs": null,
+        "iterationEfficiency": null
+      },
+      "phaseTimestamps": {},
+      "automationLevel": 2
     }
   },
   "pipeline": {
@@ -538,7 +1082,7 @@
   "session": {
     "startedAt": "2026-05-16T05:54:00.974Z",
     "onboardingCompleted": true,
-    "lastActivity": "2026-05-18T13:01:07.057Z"
+    "lastActivity": "2026-07-01T03:09:40.693Z"
   },
   "history": [
     {
@@ -1914,5 +2458,21 @@
       "phase": "do",
       "action": "updated"
     }
-  ]
+  ],
+  "stateMachine": {
+    "defaultWorkflow": "default",
+    "activeWorkflows": {},
+    "totalTransitions": 0
+  },
+  "automation": {
+    "globalLevel": 2,
+    "trustScore": 40,
+    "pendingApprovals": 0,
+    "lastGateResult": null
+  },
+  "team": {
+    "enabled": true,
+    "stateFile": ".bkit/runtime/agent-state.json",
+    "eventsFile": ".bkit/runtime/agent-events.jsonl"
+  }
 }

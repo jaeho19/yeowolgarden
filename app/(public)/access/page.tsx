@@ -6,7 +6,7 @@ import { LinkButton } from '@/components/public/LinkButton'
 export const metadata: Metadata = {
   title: '오시는 길 — 경기 부천시 오정구 여월동 112',
   description:
-    '여월농장 위치·교통 안내. 서울에서 차로 약 30분, 부천역에서 버스로 약 20분.',
+    '여월농장 위치·교통 안내. 서울에서 차로 약 30분, 서부간선대로 → 작동사거리 → 성곡초등학교 사거리 경유.',
 }
 
 const FARM_ADDRESS =
@@ -23,27 +23,8 @@ const TMAP_URL = `tmap://route?goalname=${encodeURIComponent('여월농장')}&go
 
 const CAR_GUIDE = [
   {
-    from: '서울 강서구·양천구',
-    via: '경인고속도로 → 부천 IC → 약 30분',
-  },
-  {
-    from: '인천',
-    via: '경인로 / 봉오대로 → 약 25분',
-  },
-  {
-    from: '일산·고양',
-    via: '제2경인고속도로 → 부천 IC → 약 40분',
-  },
-] as const
-
-const TRANSIT_GUIDE = [
-  {
-    from: '지하철 1호선 부천역',
-    via: '북측 정류장 — 부천 75-1번 버스 → 여월동 하차 도보 5분 (약 20분)',
-  },
-  {
-    from: '지하철 7호선 까치울역',
-    via: '도보 약 25분 또는 마을버스 환승',
+    from: '서울·부천 방면',
+    via: '서부간선대로 → 작동사거리 → 성곡초등학교 사거리',
   },
 ] as const
 
@@ -83,13 +64,11 @@ export default function AccessPage() {
 
         <div className="border-b border-border bg-background">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
-            <dl className="grid grid-cols-3 gap-x-8 gap-y-1.5 text-sm sm:gap-x-12">
+            <dl className="grid grid-cols-2 gap-x-8 gap-y-1.5 text-sm sm:gap-x-12">
               <dt className="text-muted-foreground">주소</dt>
               <dt className="text-muted-foreground">자가용</dt>
-              <dt className="text-muted-foreground">대중교통</dt>
               <dd className="font-medium text-foreground">{FARM_ADDRESS}</dd>
-              <dd className="font-medium text-foreground">서울 30분 · 인천 25분</dd>
-              <dd className="font-medium text-foreground">부천역 + 75-1번 20분</dd>
+              <dd className="font-medium text-foreground">서울 30분</dd>
             </dl>
           </div>
         </div>
@@ -170,26 +149,6 @@ export default function AccessPage() {
           <p className="mt-4 text-sm text-muted-foreground">
             ⓘ 농원 입구에 무료 주차장 (약 20대 수용). 주말 오전 10시 전 권장.
           </p>
-        </div>
-      </section>
-
-      {/* 대중교통 */}
-      <section className="bg-secondary py-12" aria-labelledby="transit-heading">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 id="transit-heading" className="font-heading text-h2 font-bold leading-tight tracking-tight text-foreground">
-            대중교통으로
-          </h2>
-          <ul className="mt-5 space-y-3">
-            {TRANSIT_GUIDE.map((g) => (
-              <li
-                key={g.from}
-                className="flex flex-col gap-1 rounded-lg border border-border bg-card p-4 shadow-sm sm:flex-row sm:gap-4"
-              >
-                <span className="font-semibold sm:w-52 shrink-0">{g.from}</span>
-                <span className="text-sm text-muted-foreground">{g.via}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
