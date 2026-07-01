@@ -149,6 +149,21 @@ export default function AccessPage() {
           <p className="mt-4 text-sm text-muted-foreground">
             ⓘ 농원 입구에 무료 주차장 (약 20대 수용). 주말 오전 10시 전 권장.
           </p>
+
+          {/* 진입 방향 사진 — 부천종합운동장 사거리에서 농장 방향 (① → ②) */}
+          <figure className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+            <Image
+              src="/access-driving-approach.png"
+              alt="부천종합운동장 사거리에서 여월농장으로 들어오는 방향을 파란 화살표 ①②로 표시한 사진"
+              width={1736}
+              height={906}
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="h-auto w-full"
+            />
+            <figcaption className="border-t border-border bg-secondary px-4 py-3 text-sm text-muted-foreground">
+              부천종합운동장 사거리에서 화살표 ① → ② 방향으로 진입
+            </figcaption>
+          </figure>
         </div>
       </section>
 
